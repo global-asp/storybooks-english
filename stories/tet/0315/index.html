@@ -74,6 +74,7 @@
 		<option value="/storybooks-esl/stories/tl/0315">Tagalog</option>
 		<option value="/storybooks-esl/stories/bo/0315">Tibetan</option>
 		<option value="/storybooks-esl/stories/tr/0315">Turkish</option>
+		<option value="/storybooks-esl/stories/uk/0315">Ukrainian</option>
 		<option value="/storybooks-esl/stories/ur/0315">Urdu</option>
 	</select>
 </div>
@@ -88,16 +89,19 @@
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/01.mp3"></audio>
 			<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon cover-icon-text" src="/storybooks-esl/css/pencil.svg" alt="Written by"></span> Ursula Nafula</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon cover-icon-text" src="/storybooks-esl/css/art.svg" alt="Illustrated by"></span> Peris Wachuka</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon cover-icon-text" src="/storybooks-esl/css/global.svg" alt="Translated by"></span> Aurelio da Costa</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon cover-icon-text" src="/storybooks-esl/css/megaphone.svg" alt="Read by"></span> Aurelio da Costa, Vitalina dos Santos, Criscencia R. Da Costa Viana</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-esl/css/language.svg" alt="Language"></span> <a href="/storybooks-esl/stories/tet">Tetum</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/storybooks-esl/css/level.svg" alt="Level"></span> <a href="/storybooks-esl/stories/tet/level3">Level 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-text" src="/storybooks-esl/css/speaker.svg" alt="Narrate full story"></span> <span class="cover_msg">The audio for this story is currently not available.</span></h3>
-
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/storybooks-esl/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/tet/0315/tet-0315_sakima.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Reading speed"><img class="cover-icon cover-icon-text" src="/storybooks-esl/css/speedometer.svg" alt="Reading speed" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Reading speed: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-esl/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 
@@ -121,7 +125,8 @@ Their grass-thatched hut was at the end of a row of trees.
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -134,7 +139,7 @@ Their grass-thatched hut was at the end of a row of trees.
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	bainhira Sakima iha tinan 3, nia moras no lakon tiha ninia vizaun. Sakima labarik mane ida ne’ebé iha talentu tebes.
+	Bainhira Sakima iha tinan 3, nia moras no lakon tiha ninia vizaun. Sakima labarik mane ida ne’ebé iha talentu tebes.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -147,7 +152,8 @@ Sakima was a talented boy.
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -173,7 +179,8 @@ For example, he could sit with older members of the village and discuss importan
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -201,7 +208,8 @@ Sakima was left with his little sister.
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -227,7 +235,8 @@ One day his mother asked him, “Where do you learn these songs from, Sakima?”
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -251,7 +260,8 @@ One day his mother asked him, “Where do you learn these songs from, Sakima?”
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -279,7 +289,8 @@ She would sway to the soothing tune.
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio08" onended="resetbutton('08')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/08.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -305,7 +316,8 @@ Sakima would accept and sing it over and over again.
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text10" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio09" onended="resetbutton('09')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/09.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -331,7 +343,8 @@ Sakima knew that there was something wrong.
 	<div class="btn-group switcher-group">
 		<a href="#text09" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text11" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio10" onended="resetbutton('10')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/10.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -359,7 +372,8 @@ The man was very sad and lonely.
 	<div class="btn-group switcher-group">
 		<a href="#text10" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text12" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio11" onended="resetbutton('11')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/11.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -387,7 +401,8 @@ But his parents dismissed him.
 	<div class="btn-group switcher-group">
 		<a href="#text11" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text13" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio12" onended="resetbutton('12')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/12.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -415,7 +430,8 @@ She said, “Sakima’s songs soothe me when I am hungry. They will soothe the r
 	<div class="btn-group switcher-group">
 		<a href="#text12" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text14" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio13" onended="resetbutton('13')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/13.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -439,7 +455,8 @@ She said, “Sakima’s songs soothe me when I am hungry. They will soothe the r
 	<div class="btn-group switcher-group">
 		<a href="#text13" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text15" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio14" onended="resetbutton('14')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/14.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -465,7 +482,8 @@ Slowly, the head of the rich man began to show through the big window.
 	<div class="btn-group switcher-group">
 		<a href="#text14" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text16" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio15" onended="resetbutton('15')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/15.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -478,7 +496,7 @@ Slowly, the head of the rich man began to show through the big window.
 <div id="text16" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/16.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Ajudante sira hapara sá de’it mak sira halo hela. Sira rona ba Sakima ninia kansaun furak sira. maibé ida husi sira dehan “Laiha ema ida mak bele konsola ita nia patraun. Labarik matan-aat ida ne’e hanoin nia bele konsola patraun ka?”
+	Ajudante sira hapara sá de’it mak sira halo hela. Sira rona ba Sakima ninia kansaun furak sira. Maibé ida husi sira dehan “Laiha ema ida mak bele konsola ita nia patraun. Labarik matan-aat ida ne’e hanoin nia bele konsola patraun ka?”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -491,7 +509,8 @@ But one man said, “Nobody has been able to console the boss. Does this blind b
 	<div class="btn-group switcher-group">
 		<a href="#text15" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text17" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio16" onended="resetbutton('16')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/16.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -504,7 +523,7 @@ But one man said, “Nobody has been able to console the boss. Does this blind b
 <div id="text17" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/17.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Sakima remata hananu ninia kansaun no fila atu ba uma. maibé ema riku ne’e halai sai lalais no dehan,” Favor ida kanta tan dala ida.”
+	Sakima remata hananu ninia kansaun no fila atu ba uma. Maibé ema riku ne’e halai sai lalais no dehan,” Favor ida kanta tan dala ida.”
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -517,7 +536,8 @@ But the rich man rushed out and said, “Please sing again.”
 	<div class="btn-group switcher-group">
 		<a href="#text16" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text18" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio17" onended="resetbutton('17')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/17.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -543,7 +563,8 @@ They had found the rich man’s son beaten up and left on the side of the road.
 	<div class="btn-group switcher-group">
 		<a href="#text17" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text19" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton18" onclick="playpause('18')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio18" onended="resetbutton('18')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/18.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton18" onclick="playpause('18')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -571,7 +592,8 @@ He took his son and Sakima to hospital so Sakima could regain his sight.
 	<div class="btn-group switcher-group">
 		<a href="#text18" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton19" onclick="playpause('19')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio19" onended="resetbutton('19')" src="https://globalstorybooks.net/media/audio/tet/0315/mp3/19.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton19" onclick="playpause('19')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('tet,en','en,tet')" class="btn btn-lg lang-primary" title="Switch between Tetum and English">en</button>
@@ -587,6 +609,7 @@ He took his son and Sakima to hospital so Sakima could regain his sight.
 		<h5><span class="colophon-heading">Written by:</span> Ursula Nafula</h5>
 		<h5><span class="colophon-heading">Illustrated by:</span> Peris Wachuka</h5>
 		<h5><span class="colophon-heading">Translated by:</span> Aurelio da Costa</h5>
+		<h5><span class="colophon-heading">Read by:</span> Aurelio da Costa, Vitalina dos Santos, Criscencia R. Da Costa Viana</h5>
 		<h5><span class="colophon-heading">Language:</span> <a href="/storybooks-esl/stories/tet">Tetum</a></h5>
 		<h5><span class="colophon-heading">Level:</span> <a href="/storybooks-esl/stories/tet/level3">Level 3</a></h5>
 		<h5><span class="colophon-heading">Source:</span> <a href="https://africanstorybook.org/reader.php?id=13244" target="_blank">Sakima's song</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
