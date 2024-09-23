@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">ولې هېپو ویښتان نه لري</span>
+		<h1 dir="rtl"><span class="def">ولې هېپو ویښتان نه لري</span>
 			<span dir="ltr" class="l1">Why hippos have no hair</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -105,12 +105,50 @@
 
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ps/ps-0111_hippos.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0111_hippos-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ps/ps-0111_hippos-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ps-en/0111_hippos-bilingual_ps-en.pdf" target="_blank">Bilingual PDF (Pashto-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ps-en/0111_hippos-imageless-bilingual_ps-en.pdf" target="_blank">Bilingual imageless PDF (Pashto-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ps/ps-0111_hippos-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ps-en/0111_hippos-bilingual_ps-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Pashto-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0111_hippos-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ps/ps-0111_hippos-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ps-en/0111_hippos-imageless-bilingual_ps-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Pashto-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	.یوه ورځ، سويي د سیند په غاړه منډې وهلې.
 	</h3></div>
 
@@ -134,7 +172,7 @@
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	
 هیپو هم هلته ګرځيده او شنه کبله (واښه) ېې خوړل.
 	</h3></div>
@@ -159,7 +197,7 @@
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	
 د هیپو پام نه و شوی، چې سویه هم دلته ده، په تیروتنې سره د سويي پر پښه وختله، سويی چغې کړې “ړنده ېې زما پر پښې وختلې!!”
 	</h3></div>
@@ -186,7 +224,7 @@ Rabbit started screaming at Hippo, “You Hippo! Can’t you see that you’re s
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	.
 هیپو له سويي بخښنه وغوښته، خو سويي د هيپو غږ وانه ورېده او په چغو ېې وویل، “یوه ورخ به خامخا خپل غچ درنه اخلم او د دې کار حسابي به دې ورکوې.”
 	</h3></div>
@@ -213,7 +251,7 @@ But Rabbit wouldn’t listen and he shouted at Hippo, “You did that on purpose
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	
 سویه د خپل غچ اخیستو لپاره لاړه اور ته ېې وویل، “ورشه کله چې هیپو له اوبو راووتله ويي سوځوه، ځکه چې زما پر پښې ختلې ده،” اور ورته یې وویل، “سمه ده زما ګرانې ملګرې، څه چې ته راته وايې همداسې کوم.”
 	</h3></div>
@@ -240,7 +278,7 @@ Fire answered, “No problem, Rabbit, my friend. I’ll do just what you ask.”
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	کله چې هیپو له اوبو څخه را ووتله، اور ورمنډه کړه او هیپو ېې وسوزوله، هیپو چغې کړې “وایییییی!!” او د هیپو ويښتان د اور خوراک شول.
 	</h3></div>
 
@@ -264,7 +302,7 @@ Fire answered, “No problem, Rabbit, my friend. I’ll do just what you ask.”
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	
 هیپو ژړل او د اوبو خواته ېې منډه کړه، د هغې ټول ویښتان سوزیدلې وو، او په ژړغوني غږ ېې وویل، “زما ښکلي ويښتان وو، زما ټول ويښتان توى شوې!!”
 	</h3></div>
@@ -291,7 +329,7 @@ Hippo kept crying, “My hair has burned in the fire! My hair is all gone! My be
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	سویه خوشحاله وه چې له هیپو ېې غچ واخیسته او د اور په واسطه ېې د هغې ويښتان وسوزول، هیپو سره دا ویره وه، چې اور ورته بيا ځلي تاوان ونه رسوي نو ځکه د اوبو تل ته ولاړه.
 	</h3></div>
 
@@ -344,7 +382,7 @@ And to this day, for fear of fire, the hippo never goes far from the water.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ps" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ps" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ps/ps-0111_hippos.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

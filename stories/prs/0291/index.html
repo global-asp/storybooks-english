@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">خواهر ووزی چه گفت؟</span>
+		<h1 dir="rtl"><span class="def">خواهر ووزی چه گفت؟</span>
 			<span dir="ltr" class="l1">What Vusi's sister said</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -108,12 +108,50 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/prs/prs-0291_vusi.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0291_vusi-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/prs/prs-0291_vusi-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/prs-en/0291_vusi-bilingual_prs-en.pdf" target="_blank">Bilingual PDF (Dari-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/prs-en/0291_vusi-imageless-bilingual_prs-en.pdf" target="_blank">Bilingual imageless PDF (Dari-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/prs/prs-0291_vusi-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/prs-en/0291_vusi-bilingual_prs-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Dari-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0291_vusi-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/prs/prs-0291_vusi-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/prs-en/0291_vusi-imageless-bilingual_prs-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Dari-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	یک روز صبح زود، مادربزرگ ووزی او را صدا کرد و گفت، “ووزی لطفا این تخم مرغ را بگیر وبرای پدر و مادرت ببر. آن‌ها می‌خواهند کیک بزرگی برای عروسی خواهرت درست کنند.”
 	</h3></div>
 
@@ -142,7 +180,7 @@ wedding.”
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	ووزی در حالی که به سمت پدر ومادرش می‌رفت، دو پسر را دید که داشتند میوه می‌چیدند. یکی از پسرها تخم مرغ را از ووزی گرفت و آن را به درخت پرتاب کرد و تخم مرغ شکست.
 	</h3></div>
 
@@ -170,7 +208,7 @@ it at a tree. The egg broke.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	ووزی گریه کرد و گفت، “شما چی کار کردید؟” “آن تخم مرغ برای کیک بود. آن کیک برای عروسی خواهرم بود. خواهرم چه خواهد گفت اگر کیک عروسی نباشد؟”
 	</h3></div>
 
@@ -199,7 +237,7 @@ wedding cake?”
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	پسرها ناراحت شدند از اینکه ووزی را اذیت کرده بودند. یکی از آن‌ها گفت، “ما نمی‌توانیم در پختن کیک کمک کنیم، ولی اینجا یک عصا برای خواهرت است.” ووزی به سفرش ادامه داد.
 	</h3></div>
 
@@ -229,7 +267,7 @@ Vusi continued on his journey.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	در طول مسیر او دو مرد را در حال ساختن خانه دید. یکی از آن‌ها پرسید، “ما می‌توانیم از عصای محکمت استفاده کنیم؟” ولی عصا به اندازه‌ی کافی برای ساختن بنا محکم نبود و شکست.
 	</h3></div>
 
@@ -258,7 +296,7 @@ for building, and it broke.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	ووزی گریه کرد وگفت، “شما چی کار کردید؟ آن عصا یک هدیه برای خواهرم بود. باغبان‌ها عصا را به من دادند چون آن‌ها تخم مرغی را که برای کیک بود شکستند. آن کیک برای عروسی خواهرم بود. ولی، حالا نه تخم مرغ، نه کیک و نه هدیه‌ای وجود دارد. خواهرم چه خواهد گفت؟”
 	</h3></div>
 
@@ -290,7 +328,7 @@ sister say?”
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	بناها به خاطر شکستن عصا متاسف شدند. یکی از آن‌ها گفت، “ما نمی‌توانیم در پخت کیک کمک کنیم، ولی اینجا مقداری کاه برای خواهرت وجود دارد.” و بنابراین ووزی به سفرش ادامه داد.
 	</h3></div>
 
@@ -321,7 +359,7 @@ journey.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	در طول مسیر، ووزی یک کشاورز و یک گاو را دید. گاو پرسید، “چه کاه‌های خوشمزه‌ای، می‌توانم اندکی از آن را بخورم؟” ولی کاه خیلی خوش‌طعم بود تا حدی که آن گاوهمه‌ی کاه را خورد!
 	</h3></div>
 
@@ -350,7 +388,7 @@ cow ate it all!
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	ووزی با گریه گفت، “شما چی کار کردید؟ آن کاه هدیه‌ای برای خواهرم بود. آن بناها آن کاه را به من داده بودند چون آن‌ها عصایی که باغبانان داده بودند را شکستند. باغبانان عصا را به من دادند چون آن‌ها تخم مرغی که برای کیک خوهرم بود را شکستند. آن کیک برای عروسی خواهرم بود. حالا نه تخم مرغ، نه کیک و نه هدیه‌ای وجود دارد، خواهرم چه خواهد گفت؟”
 	</h3></div>
 
@@ -385,7 +423,7 @@ sister say?”
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	آن گاو خیلی متاسف شد که شکمو بوده. کشاورز موافقت کرد که آن گاو می‌تواند به عنوان هدیه‌ای برای خواهرش با ووزی برود. پس ووزی به راهش ادامه داد.
 	</h3></div>
 
@@ -413,7 +451,7 @@ sister. And so Vusi carried on.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	ولی آن گاو در وقت شام، به سمت کشاورز دوید و ووزی در مسیر سفرش گم شد. او خیلی دیر به عروسی خواهرش رسید. مهمان‌ها در حال غذاخوردن بودند. آن‌ها می‌خوردند و می‌خوردند.
 	</h3></div>
 
@@ -443,7 +481,7 @@ eating.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	ووزی با گریه گفت، “چه کاری باید بکنم؟” “آن گاوی که فرار کرد، یک هدیه بود درازای کاهی که آن باها به من دادند، چون آن‌ها عصایی را که از باغبان ها گرفته بودم را شکستند. باغبان‌ها آن عصا را به من دادند، چون آن‌ها تخم مرغی را که برای کیک بود شکستند. کیک برای عروسی بود. حالا نه تخم مرغ، نه کیک و نه هدیه‌ ای وجود دارد.”
 	</h3></div>
 
@@ -478,7 +516,7 @@ gift.”
 
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0291/14.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level4-txt def"><h3 dir="rtl">
 	خواهر ووزی چند لحظه فکر کرد وسپس گفت، “ووزی، برادرم، آن هدیه‌ها برایم اهمیتی ندارد. حتی کیک هم برایم اهمیتی ندارد! ما همه با هم اینجا هستیم و من خوشحال هستم. حالا برو لباس‌های زیبایت را بپوش وبیا این روز را جشن بگیریم!” و ووزی همان کار را انجام داد.
 	</h3></div>
 
@@ -532,7 +570,7 @@ And so that’s what Vusi did.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/prs" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/prs" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/prs/prs-0291_vusi.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">روزی که من خانه را به قصد شهر ترک کردم</span>
+		<h1 dir="rtl"><span class="def">روزی که من خانه را به قصد شهر ترک کردم</span>
 			<span dir="ltr" class="l1">The day I left home for the city</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -108,12 +108,50 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/fa/fa-0324_city.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0324_city-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/fa/fa-0324_city-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/fa-en/0324_city-bilingual_fa-en.pdf" target="_blank">Bilingual PDF (Persian-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/fa-en/0324_city-imageless-bilingual_fa-en.pdf" target="_blank">Bilingual imageless PDF (Persian-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/fa/fa-0324_city-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/fa-en/0324_city-bilingual_fa-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Persian-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0324_city-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/fa/fa-0324_city-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/fa-en/0324_city-imageless-bilingual_fa-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Persian-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ایستگاه اتوبوس کوچک در روستای من پر از مردم و اتوبوس های زیاد بود. حتی روی زمین چیزهای زیادتری بود که باید بار زده می شد. شوفرها اسم مقصد اتوبوس ها را جار می‌زدند.
 	</h3></div>
 
@@ -138,7 +176,7 @@
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	من صدای شوفر راشنیدم که داد می‌زد، «شهر! شهر! به غرب می رایستگا!» این همان اتوبوسی بود که من باید سوارش می شدم.
 	</h3></div>
 
@@ -163,7 +201,7 @@
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	اتوبوس شهری همیشه پر بود، ولی بیشترمردم هل میدادند تا سوار شوند. بعضی ها وسایلشان را زیر اتوبوس جا می دادند. دیگران وسایلشان را روی باربند های داخل می گذاشتند.
 	</h3></div>
 
@@ -188,7 +226,7 @@
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	مسافران جدید بلیط هایشان را محکم در دستشان گرفته بودند همان طور که برای نشستن در اتوبوس شلوغ دنبال جا می گشتند. خانم هایی که بچه های کوچک داشتند سعی می کردند که برای راحتی کودکشان در سفر طولانی جایی درست کنند.
 	</h3></div>
 
@@ -213,7 +251,7 @@
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	من به زور خودم را کنار یک پنجره جا دادم. شخصی که کنار من نشسته بود یک کیسه پلاستیکی سبز را محکم گرفته بود. او صندل های قدیمی و یک کت کهنه به تن داشت، و دستپاچه به نظر می رسید.
 	</h3></div>
 
@@ -238,7 +276,7 @@
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	من به بیرون از اتوبوس نگاه کردم و متوجه شدم که من داشتم روستایم را ترک می کردم، جایی که در آنجا بزرگ شده بودم. من داشتم به یک شهر بزرگ می رفتم.
 	</h3></div>
 
@@ -263,7 +301,7 @@
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	بارگیری کامل شده بود و همه ی مسافران نشسته بودند. دستفروش ها هنوز با زور دنبال راهی برای داخل شدن به اتوبوس بودند تا کالاهایشان را به مسافران بفروشند. همه ی آنها داشتند داد می زدند تا اسامی چیزهایی که برای فروش دارند را بگویند. آن کلمات برای من خنده دار بودند.
 	</h3></div>
 
@@ -288,7 +326,7 @@
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	اندکی از مسافران نوشیدنی خریدند، بقیه لقمه های کوچک خریدند و شروع به خوردن کردند. آنهایی که هیچ پولی نداشتند، مثل من، فقط تماشا می کردند.
 	</h3></div>
 
@@ -313,7 +351,7 @@
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	این فعالیت ها با داد زدن راننده، که آن نشانه ی این بود که اتوبوس آماده ی حرکت است، قطع می شد. آن صدای فریاد برسر دستفروش ها بود که به بیرون بروند.
 	</h3></div>
 
@@ -338,7 +376,7 @@
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	دستفروش ها همدیگر را هل می دادند تا بتوانند راهشان را برای پیاده شدن از اتوبوس پیدا کنند. بعضی ها پول مسافران را به آنها پس می دادند. بقیه تلاش های آخرشان را برای فروختن بیشتراجناسشان می کردند.
 	</h3></div>
 
@@ -363,7 +401,7 @@
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وقتی که اتوبوس ایستگاه را ترک کرد، من به بیرون از پنجره خیره شدم. من حیرت زده ام اگر می شد به عقب برمی گشتم، دوباره به روستایم برمی گشتم.
 	</h3></div>
 
@@ -388,7 +426,7 @@
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	در طول سفر، داخل اتوبوس بسیار گرم شده بود. من چشم هایم را به این امید که به خواب بروم بستم.
 	</h3></div>
 
@@ -413,7 +451,7 @@
 
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/14.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ولی ذهنم به سمت خانه می رفت. آیا مادرم در امان خواهد بود؟ آیا از خرگوش های من پولی درخواهد آمد؟ آیا برادرم یادش می ماند که به بذرهای درختم آب بدهد ؟
 	</h3></div>
 
@@ -438,7 +476,7 @@
 
 <div id="text15" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/15.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	در راه، من اسم جایی که عمویم درآن شهر بزرگ ساکن آنجا بود را حفظ کردم. من تا زمانی که به خواب رفتم، داشتم اسم شهر را زمزمه می کردم.
 	</h3></div>
 
@@ -463,7 +501,7 @@
 
 <div id="text16" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/16.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	نه ساعت بعد، با صدای بلند مردی که ضربه می زد ومسافران را برای برگشتن به روستای من صدا می زد بیدار شدم. من کیف کوچکم را برداشتم واز اتوبوس بیرون پریدم.
 	</h3></div>
 
@@ -488,7 +526,7 @@
 
 <div id="text17" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0324/17.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	اتوبوس برگشت سریعا پر شد. خیلی زود اتوبوس به سمت شرق حرکت خوهد کرد. مهم ترین چیز برای من، پیدا کردن خانه ی عمویم بود.
 	</h3></div>
 
@@ -538,7 +576,7 @@
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/fa" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/fa" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/fa/fa-0324_city.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

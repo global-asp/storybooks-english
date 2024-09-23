@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">آنانسی و خرد</span>
+		<h1 dir="rtl"><span class="def">آنانسی و خرد</span>
 			<span dir="ltr" class="l1">Anansi and Wisdom</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -108,12 +108,50 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/fa/fa-0006_anansi.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0006_anansi-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/fa/fa-0006_anansi-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/fa-en/0006_anansi-bilingual_fa-en.pdf" target="_blank">Bilingual PDF (Persian-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/fa-en/0006_anansi-imageless-bilingual_fa-en.pdf" target="_blank">Bilingual imageless PDF (Persian-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/fa/fa-0006_anansi-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/fa-en/0006_anansi-bilingual_fa-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Persian-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0006_anansi-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/fa/fa-0006_anansi-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/fa-en/0006_anansi-imageless-bilingual_fa-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Persian-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	در زمان های خیلی خیلی قدیم مردم هیچ چیزی نمی‌دانستند. آنها نمی‌دانستند که چطور محصولات کشاورزی را بکارند، یا چطور ابزارهای فلزی بسازند. خدای نیامه در آسمانها عالم به همه ی دنیا بود. او تمام این دانش را در یک کوزه ی سفالی، امن نگه داشته بود.
 	</h3></div>
 
@@ -145,7 +183,7 @@ He kept it safe in a clay pot.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	یک روز، خدای نیامه تصمیم گرفت که این دانش و خرد را به آنانسی هدیه دهد. هر بار که آنانسی به داخل کوزه ی سفالی نگاه می‌کرد یک چیز جدید یاد می‌گرفت. این خیلی هیجان انگیز بود!
 	</h3></div>
 
@@ -175,7 +213,7 @@ new. It was so exciting!
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	آنانسی حریص با خودش فکر کرد که «من می‌توانم این کوزه را در بالای یک درخت بلند امن نگه دارم. سپس می‌توانم همه‌ی آن را فقط برای خودم نگه دارم!» او یک نخ بلند به دور کوزه پیچید، و آن را به دور شکم خود بست. او شروع به بالا رفتن از درخت کرد. ولی بالا رفتن از درخت سخت بود چون کوزه مدام به زانویش می‌خورد.
 	</h3></div>
 
@@ -210,7 +248,7 @@ knees all the time.
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	تمام این مدت پسرِ جوانِ آنانسی زیر درخت ایستاده بود و آنانسی را تماشا می‌کرد. او گفت، «اگر کوزه را به پشتت بسته بودی بهتر نبود؟» آنانسی سعی کرد کوزه ی پر از خرد را به پشتش ببندد، و واقعا خیلی آسان تر بود.
 	</h3></div>
 
@@ -243,7 +281,7 @@ really was a lot easier.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	در یک چشم به هم زدن به بالای درخت رسید. ولی سپس ایستاد و فکر کرد، «من فکر می‌کردم که من کسی هستم که تمام خردها پیش اوست، ولی الان پسرم از من باهوش تر بود!» آنانسی خیلی از این موضوع عصبانی بود تا جایی که آن کوزه ی سفالی را از بالای درخت به پایین انداخت.
 	</h3></div>
 
@@ -277,7 +315,7 @@ out of the tree.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	کوزه شکست و به چندین قسمت روی زمین خرد شد. آن خرد برای همه آزاد بود که بتوانند از آن استفاده کنند. وآن این بود که مردم یاد گرفتند که چگونه کشاورزی کنند، پارچه ببافند، ابزارهای فلزی بسازند، وتمام چیزهای دیگر که مردم می‌دانند چطورانجام دهند.
 	</h3></div>
 
@@ -335,7 +373,7 @@ how to do.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/fa" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/fa" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/fa/fa-0006_anansi.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

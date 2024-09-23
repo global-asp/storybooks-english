@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">مریشك و هەزارپێ</span>
+		<h1 dir="rtl"><span class="def">مریشك و هەزارپێ</span>
 			<span dir="ltr" class="l1">Chicken and Millipede</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -105,12 +105,50 @@
 
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0141_chicken.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0141_chicken-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ckb/ckb-0141_chicken-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ckb-en/0141_chicken-bilingual_ckb-en.pdf" target="_blank">Bilingual PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ckb-en/0141_chicken-imageless-bilingual_ckb-en.pdf" target="_blank">Bilingual imageless PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ckb/ckb-0141_chicken-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ckb-en/0141_chicken-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0141_chicken-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ckb/ckb-0141_chicken-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ckb-en/0141_chicken-imageless-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	مریشك و هەزارپێ هاوڕێ بوون، بەڵام هەمیشە حەزیان لێ بوو پێكەوە پێشبڕكێ بكەن. ڕۆژێك پێكەوە یاری تۆپی پێیان كرد بۆ ئەوەی بزانن كامیان باشترین یاریزانە.
 	</h3></div>
 
@@ -134,7 +172,7 @@
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	پێكەوە چوونە گۆڕەپانی تۆپی پێ و یارییەكەیان دەست پێ كرد. مریشك خێرا بوو، بەڵام هەزارپێ خێراتر بوو. مریشك شه‌قی له تۆپەكەی دا و بۆ دوور رۆیشت به‌ڵام تۆپه‌که به شه‌قی هەزار پێکه دوورتری رۆیشت. مریشك ههتا دەهات توڕه‌تر و توڕه‌تر دەبوو.
 	</h3></div>
 
@@ -158,7 +196,7 @@
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ئەوان بڕیاریان دا كە یارییەكی پەناڵتی جه‌زا لێدان بكەن. یەكەم جار هەزارپێ گۆڵچی بوو. مریشك تەنیا گۆڵێكی كرد. دواتر نۆرەی مریشك بوو كە گۆڵچی بێ.
 	</h3></div>
 
@@ -182,7 +220,7 @@
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	هەزارپێ شووتێكی لێدا و گۆڵی كرد. هەزارپێ دریبلێكی كرد و گۆڵی كرد. هەزارپێ بە سەر گۆڵێكی كرد. هەزارپێ پێنج گۆڵی كرد.
 	</h3></div>
 
@@ -208,7 +246,7 @@ Millipede dribbled the ball and scored. Millipede headed the ball and scored. Mi
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	مریشكەکە لەبەر ئەوەی دۆڕاندبووی، زۆر تووڕە بوو. ئەو زۆر خراپی دۆڕاندبوو. هەزارپێ دەستی بە پێکەنین کرد، چونکە هاوڕێکەی گوڕە گوڕی دەكرد.
 	</h3></div>
 
@@ -232,7 +270,7 @@ Millipede dribbled the ball and scored. Millipede headed the ball and scored. Mi
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	مریشك زۆر تووڕە بوو دەنووکی کردەوە و هەزراپێیەكەی قووت دا.
 	</h3></div>
 
@@ -256,7 +294,7 @@ Millipede dribbled the ball and scored. Millipede headed the ball and scored. Mi
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كاتێك مریشك دەچووەوە ماڵێ، چاوی بە دایكی هەزارپێ كەوت. دایكی هەزارپێ لێی پرسی: “منداڵەكەی منت نەدیوە؟” مریشك هیچی نەگوت. دایكی هەزارپێش نیگەران بوو.
 	</h3></div>
 
@@ -282,7 +320,7 @@ Mother Millipede was worried.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	پاشان دایكی هەزارپێ گوێی لە دەنگێكی لاواز بوو كە دەیگوت: “دایە یارمەتیم بدە!” دایكی هەزارپێ چاوی بە دەوروبەری خۆیدا گێڕا و بە باشی گوێی بۆ دەنگەكە راگرت. دەنگەكە لە ناو مریشكەكە‌وه دەهات.
 	</h3></div>
 
@@ -306,7 +344,7 @@ Mother Millipede was worried.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	دایكی هەزارپێ هاواری كرد: “رۆڵە ئه‌و فێڵە‌ی به کار بێنه که ده‌توانی!” هەزارپێ دەتوانێ بۆنێكی ناخۆش و تامێکی ناخۆش دروست بکات. مریشك هەستی به تێک چوون كرد.
 	</h3></div>
 
@@ -330,7 +368,7 @@ Mother Millipede was worried.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	مریشك ئه‌رشایه‌وه. تفی قوتده‌دایه‌وه‌و فرێی ده‌دایه‌وه. ده‌پشمی و ده‌کۆخی. دوایی ئه‌ڕشایه‌وه‌. هەزارپێیەكە زۆر قێزەون بوو.
 	</h3></div>
 
@@ -354,7 +392,7 @@ Mother Millipede was worried.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	مریشك ئەوەندە كۆخی تا رشایەوە و هەزارپێی لە ناو سکی فڕێدایە دەرێ. دایکی هه‌زارپێ و منداڵه‌که‌ی چوونه سه‌ر دارێکی بۆ ئەوەی خۆیان بشارنەوە.
 	</h3></div>
 
@@ -378,7 +416,7 @@ Mother Millipede was worried.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	لەوكاتەوە تا ئێستا مریشكه‌کان و هەزارپێکان بوونەتە دوژمنی یەكتر.
 	</h3></div>
 
@@ -426,7 +464,7 @@ Mother Millipede was worried.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0141_chicken.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

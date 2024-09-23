@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">یک دانه‌ی کوچک: داستان وانگاری ماتای</span>
+		<h1 dir="rtl"><span class="def">یک دانه‌ی کوچک: داستان وانگاری ماتای</span>
 			<span dir="ltr" class="l1">A Tiny Seed: The Story of Wangari Maathai</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -108,12 +108,50 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/prs/prs-0110_wangari.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0110_wangari-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/prs/prs-0110_wangari-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/prs-en/0110_wangari-bilingual_prs-en.pdf" target="_blank">Bilingual PDF (Dari-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/prs-en/0110_wangari-imageless-bilingual_prs-en.pdf" target="_blank">Bilingual imageless PDF (Dari-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/prs/prs-0110_wangari-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/prs-en/0110_wangari-bilingual_prs-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Dari-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0110_wangari-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/prs/prs-0110_wangari-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/prs-en/0110_wangari-imageless-bilingual_prs-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Dari-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	در روستایی روی سرازیری کوه کنیا در شرق آفریقا، دختر کوچکی با مادرش روی زمینی کار می‌کرد. اسم آن دختر وانگاری بود.
 	</h3></div>
 
@@ -138,7 +176,7 @@
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وانگاری از بیرون بودن لذت می‌برد. درباغچه‌ی خانوادگی شان که محصولات غذایی کشت می‌شد، با کارد بزرگ خود خاک را زیر و رو می‌کرد. او دانه‌های کوچک را در زیر خاک گرم فرو می‌کرد و روی آن را با خاک می‌پوشانید.
 	</h3></div>
 
@@ -163,7 +201,7 @@
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	بهترین زمان مورد علاقه ی او در طول روز، زمان غروب بود. زمانی که خیلی تاریک می‌شد و نمی‌شد گیاهان را دید، وانگاری می‌دانست که دیگر باید به خانه برگردد. او ازکنار رودخانه‌ها و مسیرهای باریکی که در بین زمین‌های کشاورزی بود، می‌گذشت.
 	</h3></div>
 
@@ -190,7 +228,7 @@ She would follow the narrow paths through the fields, crossing rivers as she wen
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وانگاری کودک باهوشی بود و نمی‌توانست برای به مکتب رفتن صبر کند. ولی، مادر وپدرش می‌خواستند که او بماند و به آن‌ها در خانه کمک کند. وقتی که او هفت ساله شد. برادر بزرگش، پدر و مادرش را وادار کرد که به او اجازه بدهند مکتب برود.
 	</h3></div>
 
@@ -217,7 +255,7 @@ When she was seven years old, her big brother persuaded her parents to let her g
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	او به یادگیری علاقه داشت! وانگاری با خواندن هر کتاب مطالب بیشتر وبیشتری یاد گرفت. او در مکتب عالی بود، به طوری که برای ادامه تحصیل به ایالات متحد آمریکا دعوت شد. وانگاری هیجان زده بود! او می‌خواست که بیشتر در مورد دنیا بداند.
 	</h3></div>
 
@@ -244,7 +282,7 @@ Wangari was excited! She wanted to know more about the world.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	در دانشگاه آمریکا، وانگاری چیزهای جدید زیادی یاد گرفت. او در مورد گیاهان و اینکه چی گونه رشد می‌کنند، درس می‌خواند و به یاد می‌آورد که خودش چگونه بزرگ شده است. به یاد می‌آورد که چ گونه در زیر سایه درختان در جنگل‌های زیبای کنیا با برادرش بازی می‌کرد.
 	</h3></div>
 
@@ -269,7 +307,7 @@ Wangari was excited! She wanted to know more about the world.
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	هر چه بیشتر یاد می‌گرفت، بیشتر می‌فهمید که چقدر مردم کنیا را دوست دارد. او می‌خواست که مردم شاد و آزاد باشند. هر چه بیشتر یاد می‌گرفت، بیشتر خانه ی آفریقایی اش را به یاد می‌آورد.
 	</h3></div>
 
@@ -296,7 +334,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وقتی که تحصیلاتش به پایان رسید، به کنیا برگشت. ولی شهرش تغییر کرده بود. مزرعه‌های خیلی بزرگ روی زمین گسترده شده بودند. زن‌ها دیگر هیزم برای آشپزی نداشتند. مردم فقیر بودند و کودکان گرسنه.
 	</h3></div>
 
@@ -321,7 +359,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وانگاری می‌دانست که چه کار کند. او به زنان یاد داد که چی گونه می‌توانند با استفاده از دانه‌ها درخت بکارند. زنان درخت‌ها را می‌فروختند و از پولش برای مراقبت از خانواده‌های شان استفاده می‌کردند. زنان خیلی خوشحال بودند. وانگاری به آن‌ها کمک کرده بود که احساس قدرت‌مندی و نیرومندی کنند.
 	</h3></div>
 
@@ -346,7 +384,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	همچنان که زمان می‌گذشت، د‌رخت‌های جدید در جنگل‌ها رشد کردند، و رودخانه‌ها دوباره جاری شدند. پیام وانگاری در سرتاسر آفریقا پیچید. امروز میلیون‌ها درخت از بذرهای وانگاری رشد کرده اند.
 	</h3></div>
 
@@ -371,7 +409,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وانگاری سخت کار کرده بود. مردم سراسر دنیا متوجه این موضوع شدند، و به او یک جایزه‌ی عالی دادند. آن جایزه، جایزه ی صلح نوبل بود و او اولین زن آفریقایی بود که آن را دریافت می‌کرد.
 	</h3></div>
 
@@ -396,7 +434,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وانگاری در سال 2011 از دنیا رفت، ولی ما هر وقت که به یک درخت زیبا نگاه می‌کنیم، به یاد او می‌افتیم.
 	</h3></div>
 
@@ -446,7 +484,7 @@ The more she learnt, the more she remembered her African home.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/prs" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/prs" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/prs/prs-0110_wangari.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

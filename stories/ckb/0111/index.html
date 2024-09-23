@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">بۆچی ئەسپی ئاوی موی نیه</span>
+		<h1 dir="rtl"><span class="def">بۆچی ئەسپی ئاوی موی نیه</span>
 			<span dir="ltr" class="l1">Why hippos have no hair</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -105,12 +105,50 @@
 
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0111_hippos.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0111_hippos-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ckb/ckb-0111_hippos-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ckb-en/0111_hippos-bilingual_ckb-en.pdf" target="_blank">Bilingual PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ckb-en/0111_hippos-imageless-bilingual_ckb-en.pdf" target="_blank">Bilingual imageless PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ckb/ckb-0111_hippos-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ckb-en/0111_hippos-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0111_hippos-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ckb/ckb-0111_hippos-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ckb-en/0111_hippos-imageless-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	ڕۆژێكیان كەروێشك بە لێواری رووبارێک دا رۆیشت.
 	</h3></div>
 
@@ -134,7 +172,7 @@
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	هه‌روه‌ها ئەسپی ئاوییش لەوێ بوو. ئەو چوو دەورێكی لێدا و هەندێک گیای سەوزی جوانی خوارد.
 	</h3></div>
 
@@ -158,7 +196,7 @@
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	ئەسپی ئاوی به‌ر پێی خۆی نه‌بینی و به به خۆی نه‌بوو که پێی له سه‌ر پێی که‌روێشک دانا. كەروێشك قیژاندی وهاواری کرده ئەسپی ئاوی : “هۆی ئەسپی ئاویی! نابینی پێت لەسەر پیێ من داناوە؟”
 	</h3></div>
 
@@ -184,7 +222,7 @@ Rabbit started screaming at Hippo, “You Hippo! Can’t you see that you’re s
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	ئەسپی ئاویی داوای لێبوردنی لە كەروێشك كرد: “من غه‌مگین به وه‌ی، هاورێی من تۆم نه‌بینی، تكایە بمبوورە!” بەڵام كەروێشكه‌كە نەیدەویست گوێ بگرێ، بەسەرئەسپی ئاوییدا هاواری كرد: “تۆ بە ئه‌نقه‌ست وات كرد! ڕۆژێکی وا دێ که ده‌یبینی! دەبێ سزای خۆت وه‌رگری!”
 	</h3></div>
 
@@ -210,7 +248,7 @@ But Rabbit wouldn’t listen and he shouted at Hippo, “You did that on purpose
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	كەروێشك ڕۆیشت و ئاگری دۆزێیەوە و پێی گوت: “بڕۆ ئەسپی ئاویی بسووتێنە كاتێك لە ئاوەكە دێتە دەرێ بۆ خواردنی گژوگیا. ئەو پێی لەمن نا!” ئاگر وەڵامی دایەوە: “هیچ كێشە نیه، كەروێشكی هاوڕێم. من ڕێك ئەو كارە دەكەم كە تۆ داوات لێ كردم.”
 	</h3></div>
 
@@ -236,7 +274,7 @@ Fire answered, “No problem, Rabbit, my friend. I’ll do just what you ask.”
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	پاشان ئه‌سپه ئاوییەكە لە قەراغ ڕووبارەكە گژوگیای دەخوارد، لە ناكاو بڵێسه‌ی ئاگر هه‌ستا. بڵێسەی ئاگرەكە دەستی بە سوتاندنی مووەكانی ئەسپە ئاوییەكە كرد.
 	</h3></div>
 
@@ -260,7 +298,7 @@ Fire answered, “No problem, Rabbit, my friend. I’ll do just what you ask.”
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	ئەسپە ئاوییەكە دەستی بە گریان كرد و بەرەو ئاوەكە هەڵات. هەموو مووەكانی به ئاگرەكە سوتابوو. ئەسپی ئاوییەكە گریا: “مووەكانم لە به ئاگرەكە سوتان! تۆ هەموو مووەكانمت سوتاند! مووەكانم لە ناو چوون! مووە جوانەكانم!”
 	</h3></div>
 
@@ -286,7 +324,7 @@ Hippo kept crying, “My hair has burned in the fire! My hair is all gone! My be
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
 	كەروێشك خۆشحاڵ بوو به وەی مووەكانی ئەسپی ئاویی سووتان. لەو ڕۆژەوە ئەسپی ئاویی لە ترسی ئاگر لە ئاوەكە دوور نەكەوتووەتەوە.
 	</h3></div>
 
@@ -339,7 +377,7 @@ And to this day, for fear of fire, the hippo never goes far from the water.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0111_hippos.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

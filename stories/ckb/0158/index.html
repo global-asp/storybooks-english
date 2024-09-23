@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">مریشك و هەڵۆ</span>
+		<h1 dir="rtl"><span class="def">مریشك و هەڵۆ</span>
 			<span dir="ltr" class="l1">Hen and Eagle</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -105,12 +105,50 @@
 
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0158_hen.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0158_hen-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ckb/ckb-0158_hen-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ckb-en/0158_hen-bilingual_ckb-en.pdf" target="_blank">Bilingual PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ckb-en/0158_hen-imageless-bilingual_ckb-en.pdf" target="_blank">Bilingual imageless PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ckb/ckb-0158_hen-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ckb-en/0158_hen-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0158_hen-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ckb/ckb-0158_hen-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ckb-en/0158_hen-imageless-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ڕۆژێک له رۆژان مریشك و هەڵۆ هاورێی یەكتری بوون. ئەوان پێكەوە لەگەڵ باڵندەكانی دیكەدا بە ئاشتی دەژیان. هیچ كامیان نەیاندەتوانی بفڕن.
 	</h3></div>
 
@@ -137,7 +175,7 @@ None of them could fly.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	جارێكیان برسێتی رووی له‌ وڵات کرد. هەڵۆ دەبا مەودایەكی دووری بڕیبا بۆ ئەوەی خواردن پەیدا بكات. كاتێك گەڕایەوە زۆر ماندوو بوو، بۆیە گوتی: “دەبێ رێگایەكی ئاسانتر هەبێ بۆ گەشتكردن!”
 	</h3></div>
 
@@ -166,7 +204,7 @@ to travel!” said Eagle.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	دوای خەوێكی شەوانەی باش، مریشك بیرۆكەیەكی ژیرانەی بە مێشكیدا هات. ئەو دەستی كرد بە كۆكردنەوەی پەڕە كەوتووەكانی باڵندەكانی هاوڕێی. مریشك گوتی: “وەرن با ئەو پەڕانە لە پەڕەكانی خۆمان بدروین.” لەوانەیە به‌و شێوه گەشتكردن ئاسانتر بێت.
 	</h3></div>
 
@@ -197,7 +235,7 @@ to travel.”
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	لە گوندەكە دا تەنیا هەڵۆ ده‌رزی دروومانی هەبوو، بۆیە یەكەم كەس بوو، ده‌ستی به درومان کرد. ئەو جووتێك باڵی جوانی بۆ خۆی دووری و به بەرزی هه‌وره‌کان فڕی. مریشك دەرزییەكەی بە قەرز وەرگرت، بەڵام زۆر زوو ماندوو بوو لە دروومانكردن. ئەو دەرزییەكەی لە ناو دۆڵابەكە دانا و ڕۆیشت بۆ ئەوەی خواردن بۆ جوچكەكانی لێنێت.
 	</h3></div>
 
@@ -232,7 +270,7 @@ children.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	بەڵام باڵندەكانی دیكە دیتیان هەڵۆ بەسەر كێڵگەكەدا دەفڕێ. ئه‌وان داوایان لە مریشك كرد كە دەرزییەكەیان بە قەرز بداتێ تا ئەوانیش باڵان بۆ خۆیان بدرون. خێرا باڵندەكان لە ژێر ئاسمان دەستیان بە فڕین كرد.
 	</h3></div>
 
@@ -261,7 +299,7 @@ over the sky.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كاتێك كە ئاخریین باڵندە دەرزییە قەرزكراوەكەی گەڕاندەوە، مریشك لەوێ نەبوو. جوچكەكانی دەرزییەكەیان وەرگرتەوە و دەستیان كرد بە یاریكردن پێی. كاتێك ئەوان لە یاریی كردن ماندوو بوون دەرزییەكەیان لەناو خیزه‌که بەجێهێشت.
 	</h3></div>
 
@@ -292,7 +330,7 @@ the sand.
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	دوانیوەڕۆی ئەو ڕۆژە هەڵۆ گەڕایەوە. داوای دەرزییەكەی کرده‌وه بۆ ئەوەی هەندێك لە باڵەكانی تووند بكاتەوە كە لە گەشتەكەیدا شل ببوونەوە. مریشك ناو دۆڵابەكە گەڕا. ئه‌و چێشتخانەكەش گەڕا. ئه‌و حەوشەكەش گەڕا. بەڵام دەرزییەكە لە هیچ شوێنێك دیار نەبوو.
 	</h3></div>
 
@@ -324,7 +362,7 @@ found.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	مریشك لە هەڵۆ پاڕایەوە: “تەنیا ڕۆژێك دەرفەتم بدەیە. ئەوكات دەتوانی باڵەكانت چاک بكەیەوە و دووبارە خواردن بەدەست بێنیت.” هەڵۆ گوتی: “تەنیا یەك ڕۆژی دیكە. ئەگەر دەرزییەكە‌ت نەدۆزییەوە دەبێ لە جیاتی یه‌کێك له جوچکه‌کانم بده‌ی.”
 	</h3></div>
 
@@ -355,7 +393,7 @@ your chicks as payment.”
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ڕۆژی دواتر هەڵۆ هاتەوە، بینی مریشكه‌که له ناو خیزه‌که ده‌‌گه‌ڕێ، به‌ڵام ده‌رزیه‌که‌ی نه‌دۆزیوه‌تە‌وه. بۆیە هەڵۆکه وه‌ک هه‌وره‌ تریشقه هاته خوارێ و یه‌کێک له جوچکه‌کانی فڕاند و لە كێڵگەكە دوور كەوتەوە. ئیتر له‌و کاته‌وه هەڵۆکه دەیبینی كە مریشكه‌که خەریكی لێكدانی خیزه‌که‌یه بۆ دۆزینه‌وه‌ی‌ دەرزییەکە.
 	</h3></div>
 
@@ -388,7 +426,7 @@ needle.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كاتێ سێبەری باڵەكانی هەڵۆ لەسەر زەوی دەبینرێ، مریشك جوجەڵەكانی ئاگادار دەكاتەوە: “لە‌و ده‌شته دوور كەونەوە”، ئەوانیش دەڵێن: “ئێمە گەمژە نین و هەڵدێین.”
 	</h3></div>
 
@@ -441,7 +479,7 @@ And they respond:
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0158_hen.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

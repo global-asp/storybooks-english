@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">زرلښته</span>
+		<h1 dir="rtl"><span class="def">زرلښته</span>
 			<span dir="ltr" class="l1">Simbegwire</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -105,12 +105,50 @@
 
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ps/ps-0052_simbegwire.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0052_simbegwire-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ps/ps-0052_simbegwire-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ps-en/0052_simbegwire-bilingual_ps-en.pdf" target="_blank">Bilingual PDF (Pashto-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ps-en/0052_simbegwire-imageless-bilingual_ps-en.pdf" target="_blank">Bilingual imageless PDF (Pashto-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ps/ps-0052_simbegwire-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ps-en/0052_simbegwire-bilingual_ps-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Pashto-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0052_simbegwire-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ps/ps-0052_simbegwire-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ps-en/0052_simbegwire-imageless-bilingual_ps-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Pashto-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	کله چې د زرلښتې مور مړه شوه، نو هغه ډېره خفه وه. د زرلښتې پلار د خپلې لور د پاملرنې لپاره ډېره هڅه کوله. ورو ورو دوی زده کړل چې څنګه پرته د زرلښتې د مور څخه په خوشحالۍ ژوند وکړي. دوى به هر سهار له يو بل سره کښېاستل او د راتلونکو ورځو په اړه به یې خبرې کولې. هر ماښام به يې په ګډه ډوډۍ خوړله. د لوښو د پرېمنځلو وروسته به د زرلښتې پلار د هغې سره د کورنۍ دندې په ترسره کولو کې مرسته کوله.
 	</h3></div>
 
@@ -145,7 +183,7 @@ homework.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	یوه ورځ د زرلښتې پلار د تل په شان نه، بلکې لږ ناوخته کور ته راغئ او غږ یې وکړ “زما لورې! چېرته یې؟” زرلښتې د خپل پلار په لور منډه وکړه، خو کله یې چې ولیده چې د هغې پلار د یوې ښځې لاس نیولی، نو ودرېدله. پلاریې په خندا ورته وویل: “زما لورې! زه غواړم چې تا له یو ځانګړي کس سره بلده کړم. دا انیتا ده.”
 	</h3></div>
 
@@ -177,7 +215,7 @@ smiling.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	انیتا وویل: “سلام زرلښتې، پلار دې ستا په اړه ماته ډیر څه ویلي و.” خو زرلښتې خوشحاله نه شوه، او نه یې هم د نجلۍ لاس ونیوه. د زرلښتې پلار خوشحال و. هغه د ګډ ژوند تېرولو په اړه، او دا چې د ګډ ژوند له امله به د دوی ژوند څومره ښه وي، خبرې وکړې. هغه وويل: “زما لورې! هيله ده چې ته انيتا د خپلې مور په توګه ومنې.”
 	</h3></div>
 
@@ -210,7 +248,7 @@ mother,” he said.
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	د زرلښتې ژوند بدل شو. هغې نور د سهار لخوا د خپل پلار سره د کيناستو لپاره وخت و نه موندلو. انیتا چې د کور ټول کارونه يې په غاړه و، ان دا چې د ډېرې ستړیا له امله به یې ماښام د ښوونځي کورنۍ دنده هم نه شوه ترسره کولی. زرلښته به د ډوډۍ خوړلو وروسته ویده کېدله. د هغې یوازینۍ هوساينه همغه رنګینه کمپله وه چې مور یې ورته ورکړې وه. د زرلښتې پلار په دې نه پوهېده چې لور یې خوشحاله نه ده.
 	</h3></div>
 
@@ -245,7 +283,7 @@ unhappy.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	څو مياشتې وروسته د زرلښتې پلار دوى ته وويل:”زه باید د خپلې دندې لپاره څه مودې سفر وکړم.” “مګر زه پوهیږم چې تاسوبه له یو بل سره مرسته وکړئ.” زرلښته ډېره خفه شوه، خو پلار يې پوه نه شو. انيتاهم خوشحاله نه وه او څه یې ونه ويل.
 	</h3></div>
 
@@ -277,7 +315,7 @@ either.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	د زرلښتې ژوند په خرابېدو شو. کله به یې چې د کور کارونه ونه کړل، او یا به یې کوم شکایت کوه، انیتا به هغه وهله. د شپې به انیتا ډیر خواړه خوړل، او زرلښتې ته به یې لږ خواړه پریښودل. زرلښتې به هره شپه د خپلې مور کمپله په غېږ کې نیوله او په ژړا ژړا به ویده کېده.
 	</h3></div>
 
@@ -309,7 +347,7 @@ blanket.
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	یو سهار زرلښته تر ناوخته پورې خپلې بستره کې ویده وه، چې انیتا چیغې کړې:”اى لټې نجلۍ” او له کټ څخه يې لاندې راوغورځوله. هغه کمپله چې زرلښتې ته یې ډېر ارزښت درلود، په مېخ کې ونښته او دوه ټوټې شوه.
 	</h3></div>
 
@@ -338,7 +376,7 @@ and tore in two.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	زرلښته ډیره خپه وه. هغې پرېکړه وکړه چې له کوره وتښتي. هغې د خپلې مور د کمپلې ټوټې او یو څه خواړه له ځان سره واخیستل، او له کوره ووتله. هغې هغه لارتعقیب کړه، په کومه لاره چې يې پلار تللی ؤ.
 	</h3></div>
 
@@ -367,7 +405,7 @@ her father had taken.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	کله چې ماښام شو، نو هغه یوې ویالې ته نږدې یوې لوړې ونې ته وختله او د ونې په څانګو کې یې د ځان لپاره د خوب ځای جوړ کړ. او چې ویده کېده له ځان سره سندرې ويلې: “مورې، مورې، مورې، تا زه پرېښودم، تا زه پرېښودم، او هیڅکله بیرته راونه ګرځېدې. پلار مې زما سره نوره مینه نه لري. مورې، ته کله بیرته راځې؟ تا زه پرېښودم.”
 	</h3></div>
 
@@ -401,7 +439,7 @@ You left me.”
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	بله ورځ ښځې د ویالې غاړې ته د جامو مینځلو لپاره راغلې وې چې زرلښتې سندرې ويلې، د دوی پام شو چې د لوړې ونې څخه د غمجنې سندرې اواز راځي. دوی فکر وکړ چې دا یوازې باد دی چې د ونې د پاڼو رپولو له امله اوازونه کوي، نو خپل کار ته یې دوام ورکړ. خو یوې ښځې سندرې ته په ډېر غور سره غوږ نیولی ؤ.
 	</h3></div>
 
@@ -434,7 +472,7 @@ the song.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	یادې ښځې پورته د ونې ښاخونو ته کتل چې یوه نجلۍ او د رنګینې کمپلې ټوټې یې ولیدلې، نو چیغې یې کړې، “زرلښتې!، زما د ورور لورکۍ!” نورې ښځې هم د کالیو پرېمینځل ودرول، او د زرلښتې سره یې مرسته وکړه چې له ونې څخه راښکته شي. د زرلښتې ترور هغې په غېږ کې ونیوله او د آرامولو لپاره يې هڅه وکړه.
 	</h3></div>
 
@@ -467,7 +505,7 @@ comfort her.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	د زرلښتې ترور هغه خپل کور ته یوړله. هغې زرلښتې ته ګرم خواړه ورکړه، او د خپلې مور د کمپلې سره يې په کټ کې څملوله. د شپې زرلښته په ژړا ژړا ویده شوه خو دا اوښکې یې د خوشحالۍ اوښکې وې. هغه پوهېده چې د هغې ترور به د هغې سمه پالنه وکړي.
 	</h3></div>
 
@@ -499,7 +537,7 @@ look after her.
 
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/14.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	کله چې د زرلښتې پلار کور ته راستون شو، نو ویې لیده چې په کوټه کې څوک نشته. هغه په دردمن زړه وپوښتل “څه خبره ده، انیتا؟”
 هغې ورته ځواب ورکړ، چې زرلښته له کوره تښتېدلې ده او زياته یې کړه:”ما غوښتل چې هغه زما درناوی وکړي. مګر شاید زه ډیره جدي وم.” د زرلښتې پلار له کوره ووته او د ویالې په لور روان شو. هغه د خپلې خور کلي ته ولاړ، ترڅو معلومه کړي چې که د هغه خور زرلښته لیدلي وي.
 	</h3></div>
@@ -536,7 +574,7 @@ Simbegwire.
 
 <div id="text15" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/15.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	زرلښتې د خپلې ترور د لورګانو سره لوبې کولې، چې پلار یې د لرې څخه تر سترګو شو. زرلښتې ویره درلوده چې پلار به یې ورته په غوسه وي، نو کور خواته یې منډه کړه چې ځان پټ کړي. خو پلار يې ورته ورغئ او یې وویل: “زرلښتې ، تا یوه ډېره ښه مور موندلې ده، هغه له تا سره مینه لري او تا درک کوي، زه په تا ویاړم او له تاسره مینه لرم.” دوی دواړو په دې سلا وکړه چې زرلښته به د خپلې ترور سره تر هغه وخته اوسېږي تر څو چې د زرلښتې خوښه وي.
 	</h3></div>
 
@@ -573,7 +611,7 @@ wanted to.
 
 <div id="text16" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/16.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	د هغې پلار به هره ورځ د زرلښتې لیدو ته راته. ډېر وخت وروسته پلار يې له انیتا سره په ګډه راغئ. انيتا د زرلښتې لاس په خپل لاس کې ونیوه او ورته یې وویل “کوچنۍ! زه ډېره بخښنه غواړم، زه تېروتې وم.” انيتا ژړل او ویې ويل “کولاى شې ماته د جبرانولو لپاره يو وار او چانس راکړې؟” زرلښتې د خپل پلار اندېښمن مخ ته وکتل او ورو ورو د انیتا خواته ورغله او د انیتا څخه یې خپل لاسونه راچاپېر کړل.
 	</h3></div>
 
@@ -606,7 +644,7 @@ arms around Anita.
 
 <div id="text17" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/17.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	بله اونۍ انیتا، زرلښتې، د هغې ترور او د ترور لورګانو ته د ډوډۍ خوړلو لپاره يوې لويې مېلمستيا ته بلنه ورکړه. انیتا د زرلښتې د خوښې خواړه چمتو کړي و، ټولوپه مړې خېټې خواړه وخوړل. ماشومانو لوبې او لویانو مرکې کولې. زرلښته ډېره خوشحاله وه. هغې پریکړه وکړه چې ډیر ژر به بیرته خپل کور ته راستنه شي او د خپل پلار او میرې سره به ګډ ژوند وکړي.
 	</h3></div>
 
@@ -659,7 +697,7 @@ her father and her stepmother.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ps" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ps" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ps/ps-0052_simbegwire.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

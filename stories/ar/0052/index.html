@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">سمبقواير</span>
+		<h1 dir="rtl"><span class="def">سمبقواير</span>
 			<span dir="ltr" class="l1">Simbegwire</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -108,12 +108,50 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ar/ar-0052_simbegwire.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0052_simbegwire-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ar/ar-0052_simbegwire-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ar-en/0052_simbegwire-bilingual_ar-en.pdf" target="_blank">Bilingual PDF (Arabic-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ar-en/0052_simbegwire-imageless-bilingual_ar-en.pdf" target="_blank">Bilingual imageless PDF (Arabic-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ar/ar-0052_simbegwire-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ar-en/0052_simbegwire-bilingual_ar-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Arabic-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0052_simbegwire-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ar/ar-0052_simbegwire-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ar-en/0052_simbegwire-imageless-bilingual_ar-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Arabic-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	توفيت أم سمبقواير، فحزنت البنت حزنا شديدا. فعل أبوها كل ما في وسعه للعناية بها، فبدآ رويدا رويدا يسترجعان معا شعورهما بالفرح رغم غياب الأم. كانا يجلسان كل صباح ويتناقشان فيما سيفعلانه خلال اليوم. وفي المساء، كانا يحضران العشاء معا ويغسلان الأطباق ثم يقوم أب سمبقواير بمساعدتها في القيام بفروضها المنزلية.
 	</h3></div>
 
@@ -149,7 +187,7 @@ homework.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	وفي يوم من الأيام، عاد أب سمبقواير إلى المنزل متأخرا على غير عادته وهتف: “أين أنت صغيرتي؟”. أسرعت سمبقواير لاستقبال أبيها غير أنها توقفت فجأة عند ما رأت والدها يمسك بيد امرأة لا تعرفها. قال الأب مبتسما: “صغيرتي، أريدك أن تلتقي بشخص مميز … هذه أنيتا”.
 	</h3></div>
 
@@ -182,7 +220,7 @@ smiling.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	قالت أنيتا: “أهلا سمبقواير. لقد حدثني أبوك عنك كثيرا”، غير أنها لم تبتسم ولم تمسك بيد سمبقواير. وكان أب سمبقواير فرحا متحمسا، يتحدث عن حياتهم الثلاثة معا وكيف أنها ستكون رائعة وسعيدة. ثم أضاف: “صغيرتي، أرجو أن تقبلي أنيتا كأم لك”.
 	</h3></div>
 
@@ -216,7 +254,7 @@ mother,” he said.
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	تغيرت حياة سمبقواير ولم يعد لديها الوقت لتجلس لأبيها كل صباح. فقد كانت أنيتا تكلفها بأعمال منزلية كثيرة ترهقها وتمنعها من القيام بواجباتها المدرسية عند المساء. لذلك كانت سمبقواير تنام مباشرة بعد إنهاء الأعمال المنزلية. كان عزاءها الوحيد غطاء ملون منحتها إياه أمها قبل وفاتها. أما الأب فلم يكن بادياً عليه أنه لاحظ حزن ابنته.
 	</h3></div>
 
@@ -252,7 +290,7 @@ unhappy.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	وبعد بضعة أشهر أعلم الأب زوجته وابنته أنه سيبتعد لبعض الوقت. قال لهما: “سأسافر للقيام ببعض الأعمال. لكنني على ثقة من أنكما ستعتنيان ببعضكما.” تغير وجه سمبقواير لكن أباها لم يلحظ ذلك. أنيتا أيضا لم تكن سعيدة بهذا الخبر لكنها لم تنبس بكلمة.
 	</h3></div>
 
@@ -285,7 +323,7 @@ either.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	تدهورت حياة سمبقواير، فقد كانت أنيتا تضربها كلما اشتكت أو أنها لم تتمكن من إنهاء العمل الذي كلفتها به. أما عند العشاء فقد كانت أنيتا تستأثر لنفسها بالكمية الأكبر من الأكل ولا تترك لسمبقواير غير الفُتات. كانت سمبقواير تنام كل ليلة باكية، محتضنة الغطاء الذي أهدتها إياه أمها.
 	</h3></div>
 
@@ -318,7 +356,7 @@ blanket.
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	وفي إحدى الأيام استيقظت سمبقواير متأخرة فصرخت أنيتا بوجهها: “أنت … أيتها البنت الكسولة” ودفعتها بقوة خارج السرير فعلق الغطاء الثمين بمسمار وتمزق إلى نصفين.
 	</h3></div>
 
@@ -348,7 +386,7 @@ and tore in two.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	غضبت سمبقواير غضباً شديداً وقررت الهروب من المنزل. فأخذت جُزْءَيْ الغطاء وبعضاً من الطعام وغادرت المنزل متبعة الطريق التي سلكها أبوها.
 	</h3></div>
 
@@ -378,7 +416,7 @@ her father had taken.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	عندما أقبل المساء، تسلقت الفتاة شجرةً باسقةً على ضفة نهر وجعلت لنفسها سريراً بين أغصانها وبدأت تغني وهي تستعد للنوم: “ما ما، ماما، ماما، لقد تركتني … تركتني ولن تعودي أبدا. أبي لم يعد يحبني. ماما متى ستعودين؟”
 	</h3></div>
 
@@ -413,7 +451,7 @@ You left me.”
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	ومن الغد غنت سمبقواير نفس الأغنية من جديد عندما كان بعض النسوة يغسلن الثياب بماء النهر. ولما سمعن الأغنية الحزينة تَصِلُهنَّ من أعلى الشجرة، ظنن أنها لا تعدو أن تكون وشوشة الريح في أوراق الشجرة وواصلن عملهن متجاهلات ما سمعن. لكن إحداهن استمعت إلى الأغنية بانتباه شديد.
 	</h3></div>
 
@@ -447,7 +485,7 @@ the song.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	رفعت المرأة نظرها إلى أعلى الشجرة، وعندما رأت الفتاة وقطعتَيْ الغطاء الملونتين صاحت: “سمبقواير … ابنة أخي!”. توقفت بقية النساء عن غسل الثياب وساعدن سمبقواير على النزول من أعلى الشجرة. عانقت العمة الطفلة الصغيرة وحاولت مواساتها.
 	</h3></div>
 
@@ -481,7 +519,7 @@ comfort her.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	أخذت العمة الصغيرة معها إلى منزلها وقدمت لها طعاما ساخنا ووضعتها في سرير لتنام وغطاء أمها معها. ليلتها بكت سمبقواير قبل أن تنام لكنها كانت دموع فرح وسعادة، إذ أنها أدركت بأن عمتها سوف تعتني بها.
 	</h3></div>
 
@@ -514,7 +552,7 @@ look after her.
 
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/14.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	عندما عاد أب سمبقواير إلى المنزل، وجد غرفتها خالية. انزعج الأب وسأل أنيتا عن ابنته وقلبه مثقل بالحزن: “أنيتا، ما الذي حصل؟” أجابت أنيتا بأن سمبقواير قد هربت من المنزل، مضيفة: “كنت أريدها أن تحترمني: لكن أظن أنني قد قسوت عليها بعض الشيء”. غادر الأب البيت مسرعاً في اتجاه النهر، وواصل طريقه نحو بيت أخته، أملا في أن تكون قد رأت سمبقواير.
 	</h3></div>
 
@@ -551,7 +589,7 @@ Simbegwire.
 
 <div id="text15" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/15.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	كانت سمبقواير تلعب مع أبناء عمتها عندما رأت أباها مقبلا من بعيد. أصابها ذعر شديد من أن يكون غاضباً منها فأسرعت بالاختباء داخل المنزل. لكن أباها أسرع إليها قائلا: “عزيزتي سمبقواير، لقد وجدتِ أماً رائعة لك … تحبك وتفهمك، أحبك صغيرتي وأنا فخور بك”. اتفق الجميع على أن تظل سمبقواير مع عمتها طالما أرادت ذلك.
 	</h3></div>
 
@@ -589,7 +627,7 @@ wanted to.
 
 <div id="text16" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/16.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	كان أبوها يزورها كل يوم. وأخيرا اصطحب معه أنيتا إلى منزل أخته. أمسكت أنيتا بيد سمبقواير هذه المرة وقالت باكية: “سامحيني صغيرتي، لقد أخطأت في حقك، هلا منحتني فرصة أخرى؟” نظرت سمبقواير إلى أبيها فرأت قلقا يعلو وجهه. فتقدمت ببطء نحو أنيتا وأحاطتها بذراعيها.
 	</h3></div>
 
@@ -623,7 +661,7 @@ arms around Anita.
 
 <div id="text17" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0052/17.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	ومن الغد، دعت أنيتا سمبقواير وعمتها وأبناء عمتها إلى وجبة غذاء بمنزلها. كانت مأدبةً رائعةً، إذ أن أنيتا أعدت كل الأطباق التي تحبها سمبقواير. أكل الجميع حد التخمة وانغمس الأطفال في اللعب بينما انصرف الكبار يتجاذبون أطراف الحديث. شعرت سمبقواير بالفرح وبالشجاعة وقررت أن تعود قريبا جدا للعيش مع أبيها وزوجة أبيها في منزل العائلة
 	</h3></div>
 
@@ -678,7 +716,7 @@ her father and her stepmother.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ar" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ar" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ar/ar-0052_simbegwire.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

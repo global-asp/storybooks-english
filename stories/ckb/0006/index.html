@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">ئانانسی و زانایی</span>
+		<h1 dir="rtl"><span class="def">ئانانسی و زانایی</span>
 			<span dir="ltr" class="l1">Anansi and Wisdom</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -105,12 +105,50 @@
 
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0006_anansi.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0006_anansi-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ckb/ckb-0006_anansi-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ckb-en/0006_anansi-bilingual_ckb-en.pdf" target="_blank">Bilingual PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ckb-en/0006_anansi-imageless-bilingual_ckb-en.pdf" target="_blank">Bilingual imageless PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ckb/ckb-0006_anansi-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ckb-en/0006_anansi-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0006_anansi-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ckb/ckb-0006_anansi-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ckb-en/0006_anansi-imageless-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	لە سەردەمانی زوو خەڵك هیچیان نەدەزانی. خەڵك نەیاندەزانی شت بچێنن یان پارچە بچنن یان كەرەستەی ئاسن دروست بكەن. خەڵك باوەڕیان وابوو خودایەك بە ناوی “نیاما” لە ئاسمانه که هەموو زانایاریه‌کانی جیهانی له لایە. ئەو هەموو زانایاریه‌کانی لەناو گۆزەیەكی گڵدا شاردۆته‌وه.
 	</h3></div>
 
@@ -141,7 +179,7 @@ He kept it safe in a clay pot.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	رۆژێكیان نیاما بڕیاری دا كە گۆزەی پڕ لە زانایی بدات بە ئانانسی. هەر جارەی كە ئانانسی سەیری گۆزەكەی دەكرد، شتێكی نوێ فێر دەبوو. زۆر سەرنجڕاكێش بوو!
 	</h3></div>
 
@@ -170,7 +208,7 @@ new. It was so exciting!
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ئانانسی چاوچنۆك بیری كردەووە: “من ئەم گۆزەیە لەسەر دارێک دەشارمەوە كە تەنیا خۆم بتوانم كەڵكی لێ وەربگرم!” ئەو پەتێكی درێژی هێناو لە دەوری گۆزەكەی ئاڵاند و لە كەمەری خۆی بەست و دواتر بەسەر دارەكە هەڵگەڕا، بەڵام زۆر بە سەختی دەیتوانی بە دارەكەدا هەڵگەڕێ، لەبەر ئەوەی هەموو جارێ گۆزەكە بە ئەژنۆی دەكەوت.
 	</h3></div>
 
@@ -204,7 +242,7 @@ knees all the time.
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كوڕە بچوكەكەی ئانانسی لەژێر دارەكە وەستابوو چاوی لێ دەكرد و گوتی: “ئاسانتر نەبوو كە ئەگەر ئەو گۆزەیەت لە كۆڵت بەستبا؟” ئەوجار ئانانسی هەوڵی دا كە گۆزەی پڕ لە زانایی لە پشتی ببەستێ. لە ڕاستیدا ئاوا زۆر ئاسانتر بوو.
 	</h3></div>
 
@@ -236,7 +274,7 @@ really was a lot easier.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	خەریك بوو لەترۆپکی دارەكە نزیك دەبوویەوە، بەڵام دواتر راوەستا و بیری كردەووە: “بڕیار وابوو هەر ئەمن هەموو زاناییەکم هەبێت، بەڵام ئێستا كوڕەكەم لە من ژیرترە!” ئانانسی زۆر توڕە بوو، بۆیە گۆزەكەی لەسەر دراره‌که‌وه فڕێدایە خوارەوە.
 	</h3></div>
 
@@ -269,7 +307,7 @@ out of the tree.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	گۆزەكە شكا و بوو بە هەزار پارچە. ئەوجار زانایی ئازاد بوو بۆ هەموو كەس كە سوودی لێوەربگرێ. بەم جۆرە بوو كە خەڵك فێربوون زەوی بكێڵن، جلوبەرگ بدوروون و كەرەستەش لە ئاسن دروست بكەن، و هەموو شتەكانی دیكەش كە خەڵك دەزانن چۆن دروستیان بكەن.
 	</h3></div>
 
@@ -325,7 +363,7 @@ how to do.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0006_anansi.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

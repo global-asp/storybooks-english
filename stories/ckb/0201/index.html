@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">جاشك</span>
+		<h1 dir="rtl"><span class="def">جاشك</span>
 			<span dir="ltr" class="l1">Donkey Child</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -105,12 +105,50 @@
 
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0201_donkey.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0201_donkey-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ckb/ckb-0201_donkey-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ckb-en/0201_donkey-bilingual_ckb-en.pdf" target="_blank">Bilingual PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ckb-en/0201_donkey-imageless-bilingual_ckb-en.pdf" target="_blank">Bilingual imageless PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ckb/ckb-0201_donkey-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ckb-en/0201_donkey-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0201_donkey-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ckb/ckb-0201_donkey-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ckb-en/0201_donkey-imageless-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	بۆ یەكەم جار كچێكی بچووك بوو كە لە دوورەوە تارمایه‌کی گوماناوی بینی.
 	</h3></div>
 
@@ -134,7 +172,7 @@
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كاتێك كەم، كەم تارمایه‌که نزیك بۆوه‌، ئەو بینی كە ژنێكی دووگیانه.
 	</h3></div>
 
@@ -158,7 +196,7 @@
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	بە شەرمەوە، بەڵام ئازایانە كچە بچوكەكە لە ژنەكە نزیك بۆوه. ئەوانەی كە لەگەڵ كچە بچوكەكە بوون بریاریاندا: “ئێمە دەبێ ئەو لێرە لە لای خۆمان بهێڵینەوە. ئێمە دەبێ خۆی و منداڵەكەی بپارێزین.”
 	</h3></div>
 
@@ -184,7 +222,7 @@
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	منداڵەكە كاتی لەدایکبوونی بوو. “پاڵی پێوه نێ!” “چارۆكە بێنە!” “ئاو!” “پاڵی پێوه نێ!”
 	</h3></div>
 
@@ -216,7 +254,7 @@
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كاتێ ئەوان منداڵەكەیان بینی، هەموویان بە سەرسامییەوە كشانەوە. “گوێدرێژێك؟”
 	</h3></div>
 
@@ -242,7 +280,7 @@
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	هەموویان دەستیان كرد بە دەمەقاڵێ كردن. هەندێكیان گوتیان: “ئێمە گوتمان دە‌بێ پارێزگاری لە دایک و منداڵه‌که بکه‌ین، دەبێ ئەو كارەش بكەین”، بەڵام هه‌ندێکیشیان گوتیان: “ئەمانە نەهامەتی دێنن!”
 	</h3></div>
 
@@ -270,7 +308,7 @@
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	بەم جۆرە بوو كە ژنەكە دووبارە بێكەس مایەوە. ئەو نەیدەزانی كە دەبێ چی لەم منداڵە سەیرە بكات. ئەو نەیدەزانی ئەی خۆی دەبێ چی بكات.
 	</h3></div>
 
@@ -298,7 +336,7 @@ She wondered what to do with herself.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	بەڵام لە كۆتاییدا دانی بەوەدانا كە ئەو منداڵە، منداڵی خۆیەتی و ئەویش دایكییەتی.
 	</h3></div>
 
@@ -322,7 +360,7 @@ She wondered what to do with herself.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ئەگەر قەبارەی منداڵەكە هەر ئەوەندە چكۆلە مابایەوە، لەوانەیە هەموو شتێك جیاواز بووبا. بەڵام جاشكەكە هەتا دەهات گەورەو گەورەتر دەبوو تا وای لێهات بە کۆڵی دایکی هەڵنەدەگیرا. لەگەڵ ئەوەی زۆر به سه‌ختی هەوڵی دەدا، بەڵام نەیتوانی وەكوو مرۆڤێك ڕەفتار بكات. دایكی زۆرجار شەکەت و ماندوو دەبوو بەدەستییەوە. هەندێ جار ناچاری دەکرد جۆرە كارێك بکات كە كاری ئاژەڵان بوو.
 	</h3></div>
 
@@ -348,7 +386,7 @@ And no matter how hard he tried, he could not behave like a human being. His mot
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	گێژبوون و توڕەیی لەناو ناخی گوێدرێژەكەدا دروست ببوو. ئەو نەیدەتوانی ئەم كارە بكات و ئەو نەیدەتوانی ئەو كارە بكات. ئەو نەیدەتوانی وەك ئەم بێت و ئەو نەیدەتوانی وەك ئەو بێت. ئەو ئەوەندە تووڕە بوو تا ئەوەی كە ڕۆژێك بە لوشكەیەك دایكی بە زەوی دادا. :
 	</h3></div>
 
@@ -374,7 +412,7 @@ He became so angry that, one day, he kicked his mother to the ground.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	گوێدرێژەكە شەرمەزار بوو. ئەو هەڵات و هەتا توانی به خێرای دوور كەوتەوە.
 	</h3></div>
 
@@ -398,7 +436,7 @@ He became so angry that, one day, he kicked his mother to the ground.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كاتێك ئه‌و لە غاردان ڕاوه‌ستا، شەو داهاتبوو، و گوێدرێژەكە ڕێی ون کرد بوو. ئەو لە تاریكایی دا دەیزەڕاند: “هی ها!” و دەنگی دەدایەوە. ئەو تەنیا بوو. ئەو خۆی وەك تۆپێك گڵۆڵە كرد و چووە ناو خەوێكی قووڵ و ناخۆشەوە.
 	</h3></div>
 
@@ -428,7 +466,7 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/14.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	گوێدرێژەكە که لە خەو هەستا، پیاوێكی پیری بینی كە لەسەر سەری چاوی تێوه‌بڕیوه. ئەو تەماشای چاوەكانی پیرەمێردەكەی كرد و هەستی بە تروسكەیەكی هیوا كرد.
 	</h3></div>
 
@@ -452,7 +490,7 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 
 <div id="text15" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/15.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	گوێدرێژکە رۆیشت تا لەگەڵ پیرە پیاوەكە بژی، ئەو زۆر ڕێگەی جیاوازی بۆ ژیان کردن فێر كرد. گوێدرێژەکە گوێڕایەڵی كرد و فێر بوو، پیرە پیاوەكەش هەر وای کرد. ئەوان یارمەتی یەكتریان دهدا و پێكەوە‌ش پێده‌که‌نین.
 	</h3></div>
 
@@ -478,7 +516,7 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 
 <div id="text16" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/16.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	به‌ره‌به‌یانیه‌ک پیاوە پیرەكە داوای لە كەرەكە كرد كە به سواری بیبات بۆ سەر لوتكەی چیایەك.
 	</h3></div>
 
@@ -502,7 +540,7 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 
 <div id="text17" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/17.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	لە سەرەوە و لەناو هەورەكان خەویان لێكەوت. گوێدرێژەکە خەوی بە دایكییەوە بینی كە نەخۆشە و بانگی دەكات. لەو كاتەدا ئەو لە خەو هەستا…
 	</h3></div>
 
@@ -530,7 +568,7 @@ And when he woke up…
 
 <div id="text18" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/18.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	هەورەكان دیارنەمابوون، هه‌روه‌‌ها هاوڕێكەشی، پیرە پیاوكە.
 	</h3></div>
 
@@ -554,7 +592,7 @@ And when he woke up…
 
 <div id="text19" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/19.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	گوێدرێژەکە سەرئەنجام تێگەییشت كە دەبێ چی بكات.
 	</h3></div>
 
@@ -578,7 +616,7 @@ And when he woke up…
 
 <div id="text20" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/20.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	گوێدرێژەکە دایكی دیتەوە كە تەنیا بوو، و په‌رۆشی لەدەستدانی منداڵەكەی بوو. بۆ ماوەیەكی زۆر چاویان لە یەكتری بڕی. پاشان زۆر بە گەرمی ئامێزیان بە یەكتریدا كرد.
 	</h3></div>
 
@@ -604,7 +642,7 @@ And then hugged each other very hard.
 
 <div id="text21" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/21.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	جاشكەكە و دایكی بەیەكەوە گەورە بوون و پێكەوە ڕێگای زۆری جۆراوجۆریان بۆ ژیان دیتەوە. وردە، وردە، بنەماڵەی دیکەش هاتن و لە دەوروبەری ئەوان نیشتەجێ بوون.
 	</h3></div>
 
@@ -654,7 +692,7 @@ Slowly, all around them, other families have started to settle.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0201_donkey.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

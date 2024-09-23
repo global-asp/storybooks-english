@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">ماگۆزوه</span>
+		<h1 dir="rtl"><span class="def">ماگۆزوه</span>
 			<span dir="ltr" class="l1">Magozwe</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -105,12 +105,50 @@
 
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0262_magozwe.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0262_magozwe-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ckb/ckb-0262_magozwe-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ckb-en/0262_magozwe-bilingual_ckb-en.pdf" target="_blank">Bilingual PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ckb-en/0262_magozwe-imageless-bilingual_ckb-en.pdf" target="_blank">Bilingual imageless PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ckb/ckb-0262_magozwe-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ckb-en/0262_magozwe-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0262_magozwe-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ckb/ckb-0262_magozwe-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ckb-en/0262_magozwe-imageless-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	لە شاری قه‌ره‌باڵغی “ناروبی” دوور لە ژیانی ئاسایی ماڵه‌وه، دەستەیەك لە كوڕانی بێ ماڵ ژیانیان بەسەر دەبرد. ئەوان هەموو رۆژێكیان بەو جۆرەی كە دەهات پێشوازیان لێ دەكرد. ‌به‌یانیان كوڕەكان رایەخەكانیان كۆ دەكردەوە که شه‌وێ له سه‌ر پیاده‌ره‌وێکی ساردا نووست بوون. له سه‌رمان بۆ خۆ گه‌رم کردنه‌وه‌ ئاگریان به زبڵ کرده‌ووه. یەكێك لە كوڕەكانی ناو ئەو گروپە‌، ماگۆزوه بوو. ئەو تەمەنی لە هەموان كەمتر بوو.
 	</h3></div>
 
@@ -138,7 +176,7 @@ Among the group of boys was Magozwe. He was the youngest.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	كاتێک دایك و باوكی ماگۆزوه مردن، ئەو تەمەنی تەنیا پێنج ساڵ بوو. ئەو رۆیشت بۆ ئەوەی لەگەڵ مامی ژیان بەسەر بەرێت. بەڵام ئەو پیاوە ئاگای لە منداڵەكە نەدەبوو. ئەو خواردنی تەواوی بە ماگۆزوه نەدەدا. ئەو کوڕه‌که‌ی ناچار كرد كە كاری زۆر سەخت بکات.
 	</h3></div>
 
@@ -162,7 +200,7 @@ Among the group of boys was Magozwe. He was the youngest.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	ئەگەر ماگۆزوه گلەیی یان پرسیارێكی كردبایە، مامی لێی دەدا. کاتێک ماگۆزوه پرسیاری كردبا كە ئەو دەتوانێ بچێتە قوتابخانە، مامی لێی دەدا ودەیگوت: “تۆ گێلی و فێری هیچ شتێك نابیت.” پاش سێ ساڵ به‌و شێوازە هەڵسوكە‌وتە، ماگۆزوه هەڵات و لە مامی دوور كەوتەوە. ژیانی سەر شەقامی دەستپێكرد.
 	</h3></div>
 
@@ -188,7 +226,7 @@ After three years of this treatment Magozwe ran away from his uncle. He started 
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	ژیانی سەر شەقامەکان زۆر سەخت بوو، زۆربەی كوڕەكان رۆژانە خۆیان ماندوو دەكرد هەر بۆ ئەوەی خواردنیان دەست كەوێت. هەندێك جار دەگیران و هەندێك جارانیش لێیان دەدرا. كاتێكیش نەخۆش دەكەوتن، كەس نەبوو یارمەتیان بدات. گروپەكە پشتیان بەو پارە كەمەوە دەبەست كە لە رێگای سواڵ كردن و لە فرۆشتنی پلاستیكی كۆن و ئەو كەرەستانەی كە سەرلە نوێ بەكاردێنەوە، دەستیان دەكەوت. ژیان بە هۆی پێكدادان لەگەڵ گروپەكانی دیكەی ڕكابەریان ئەستەمتر دەبوو كە دیانویست بەشەكانی شارەكە كۆنترۆڵ بكەن و بیخەنە ژێردەسەڵاتی خۆیانەوە.
 	</h3></div>
 
@@ -216,7 +254,7 @@ Life was even more difficult because of fights with rival groups who wanted cont
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	رۆژێكیان كە ماگۆزوه لە ناو تەنەكە زبڵەكاندا دەگەڕا، كتێبێكی چیرۆكی کۆنی منداڵانی دڕاوی دۆزیه‌وه. ئەو تەپو تۆزەكانی لەسەر تەكاندو لە كیسەكەی خۆی هاویشت. دوای ئەوە هەموو رۆژێك كتێبەكەی دەردێنا و چاوی لە وێنەكانی دەكرد. ئەو نەیدەزانی چۆن وشەكان بخوێنێتەوە.
 	</h3></div>
 
@@ -242,7 +280,7 @@ Every day after that he would take out the book and look at the pictures. He did
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	وێنەكان چیرۆكی كوڕێكیان باس دەكرد كە دەیهەویست ببێتە فرۆكەوان، كاتێك كە گەورە دەبێت. ماگۆزوه‌ هەموو رۆژێك لە دونیای خەیاڵاتی خۆیدا ئاواتی دەخواست كە فڕۆكەوان بوایە. جاروبارە وای بە خەیاڵدا دەهات كە ئەو كوڕەی ناو چیرۆكەكە بۆخۆیەتی.
 	</h3></div>
 
@@ -268,7 +306,7 @@ Magozwe would daydream of being a pilot. Sometimes, he imagined that he was the 
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	هەوا سارد بوو و ماگۆزو‌ه لە كەنار شەقامەكە راوەستا بوو و سواڵی دەكرد. پیاوێك چۆ بۆ لای. پیاوەكە گوتی: “سڵاو من ناوم تۆماسە. من له‌و نزیکانه‌وه ده‌ژیم، له شوێنێک که ده‌توانی شتێک بخۆی” ئەو‌ه‌ی گوت و ئاماژەی بە خانوویەكی زەرد كرد كە سەربانەكەی شین بوو. ئەو پرسیاری كرد و گوتی: “هیواداربم كە تۆ بچیته‌ ئەوێ كە هەندێ خواردنت دەستبكەوێ؟” ماگۆزوه‌ تەماشایەكی پیاوەكەی كردو پاشان تەماشایەكی خانوەكەی كرد و گوتی: “لەوانەیە” و رۆیشت.
 	</h3></div>
 
@@ -296,7 +334,7 @@ Magozwe looked at the man, and then at the house. “Maybe,” he said, and walk
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	بە درێژایی مانگەكانی دواتر كوڕە بێ لانەكان بە دیتنی تۆماس لەو دەوروبەرە راهاتبوون. ئەو حەزی لێ بوو كە لەگەڵ خەڵك قسە بكات، بەتایبەت ئەو خەڵكانەی كە لەسەر شەقامەكان دەژیان. تۆماس گوێی لە چیرۆكی ژیانی خەڵكی رادەگرت. ئەو راستگۆ و خۆڕاگر بوو، هه‌رگیز بێ شه‌رم و بێ ڕێز نەبوو. هەندێك لە كوڕەكان ده‌چوونە ناو خانوە زەردو شینەكە بۆ ئه‌و‌‌ه‌‌ی نانی نیوەڕۆیان دەست بكەوێت.
 	</h3></div>
 
@@ -322,7 +360,7 @@ Thomas listened to the stories of people’s lives. He was serious and patient, 
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	ماگۆزوه‌ لەسەر پیادەڕەوەكە دانیشتبوو و چاوی لە وێنەكانی ناو كتێبەكە دەكرد كاتێك كە تۆماس هات و لە نزیك ئەو دانیشت. تۆماس پرسیاری لێكرد: “چیرۆكەكە باسی چی دەكات؟” ماگۆزوه‌ وه‌ڵامی دایەوە: “كتێبەكە سەبارەت بە كوڕێكە كە دەبێتە فڕۆكەوان.” تۆماس لێی پرسی: “كوڕەكە ناوی چییە؟” ماگۆزوه بە هێمنی وەڵامی دایەوە: “نازانم، من ناتوانم بخوێنمەوە.”
 	</h3></div>
 
@@ -354,7 +392,7 @@ Thomas listened to the stories of people’s lives. He was serious and patient, 
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	كاتێ چاویان بەیەك كەوت، ماگۆزو‌ه چیرۆكی ژیانی خۆی بۆ تۆماس گێڕایەوە. چیرۆكی مامی و هەروەها بۆچی ئەو هەڵاتووە. تۆماس زۆر قسەی نەدەكرد ئەو بە ماگۆزو‌ه‌ شی نەدەگوت كە دەبێ چی بكات، بەڵام بەردەوام بە جوانی گوێی رادەگرت. جاروبار ئەوان كاتێك لە خانووە زەرد و شینەكەدا خەریكی نان خواردن بوون، قسەیان دەكرد.
 	</h3></div>
 
@@ -382,7 +420,7 @@ Sometimes they would talk while they ate at the house with the blue roof.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	لە سەروبەندی دەیەمین ساڵڕۆژی لە دایكبونی ماگۆزوه‌ دا، تۆماس كتێبێكی منداڵانی تازەی بە دیاری دایە. كتێبەكە چیرۆكی كوڕێكی خەڵكی گوندی بوو کاتێ گەورە بوو یاریزانێكی بە ناوبانگی تۆپی پێی لێ دەربچێت. تۆماس ئەو چیرۆكەی چەندین جار بۆ ماگۆزوه خوێندەوە تا رۆژێكیان ئەو گوتی: “من پێم وایە كاتی ئەوە هاتووە كە تۆ بچیتە قوتابخانە و فێری خوێندنەوە ببیت. رای تۆ چییە؟” تۆماس بۆی روونكردەوە كە ئەو جێگایەك پێدەزانێ كە منداڵان دەتوانن لەوێ بمێننەوە و بۆ قوتابخانەش بڕۆن.
 	</h3></div>
 
@@ -408,7 +446,7 @@ Thomas read that story to Magozwe many times, until one day he said, “I think 
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	ماگۆزوه لە بارەی ئەو شوێنە تازەیە و سەبارەت بۆ چوونه قوتابخانە بیری كردەووە. ئەگەر مامی ئەو راستی بگوتبایە كە ئەو نەفامتر لەوە بوایە كە شتێك فێر ببێت چی؟ ئەگەر ئەوان لەو شوێنە تازەیە لێی بدەن چی؟ ئەو ترسابوو. ئەو بیری كردەووە كە: “رەنگە باشتر وابێ كە لە سەر شەقامەكان ژیان بەسەر ببات.”
 	</h3></div>
 
@@ -434,7 +472,7 @@ What if they beat him at this new place? He was afraid. “Maybe it is better to
 
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/14.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	ئەو لەبارەی مەترسیەكانی خۆی لەگەڵ تۆماس قسەی كرد. بە تێپەربوونی كات پیاوەكە دڵنیایی بە كوڕەكە دا كە ژیان لە شوێنە تازەكە دەتوانێ باشتر بێت.
 	</h3></div>
 
@@ -458,7 +496,7 @@ What if they beat him at this new place? He was afraid. “Maybe it is better to
 
 <div id="text15" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/15.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	لە دوای ئەوە ماگۆزوه رۆیشته ناو ژووری خانوویەك كە سەربانەكەی سەوز بوو. ئەو لەگەڵ دوو كوڕی دیكە پێكەوە لە ژورێكدا بوون. دە مناڵ بوون و پوورە سیزی و مێردەكەی، سێ سەگ، پشیلەیەك و بزنێكی پیر لە ناو خانووە دا دەژیان.
 	</h3></div>
 
@@ -484,7 +522,7 @@ Altogether there were ten children living at that house. Along with Auntie Cissy
 
 <div id="text16" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/16.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	ماگۆزوه لە قوتابخانە دەستی بە خوێندن كرد و پێی زەحمەت بوو. ئەو زۆر شت هەبوو كە دەبوایە بە دەستی بهێنێت. جاروبارە بیری لێدەكردەوە كە واز بهێنێت. بەڵام ئەو بیری لە فرۆكەوانەكە و یاریزانی تۆپی پێیەكەی ناو كتێبی چیرۆكی منداڵه‌کان دەكردەووە. ئەویش وەك ئەوان كۆڵی نەداو وازی نەهێنا.
 	</h3></div>
 
@@ -510,7 +548,7 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 
 <div id="text17" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/17.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level5-txt def"><h3 dir="rtl">
 	ماگۆزوه لە حەوشەی خانووە سەربان سەوزەكە دانیشتبوو و چیرۆكیكی منداڵانی دەخوێندەوە، كە لە قوتابخانە پێیان دابوو. تۆماس هات و لە لای دانیشت. تۆماس لێی پرسی: “بابەتی چیرۆكەكە چییە؟” ماگۆزوه لە وەڵامدا گوتی: “لەبارەی كوڕێكە كە دەبێتە مامۆستا.” تۆماس لێی پرسی: “ئەو كوڕە ناوی چییە؟” ماگۆزوه بە زەردەخەنەوه‌ وه‌ڵامی دایه‌وه‌ : “ئەو كوڕە ناوی ماگۆزوه‌یه.”
 	</h3></div>
 
@@ -560,7 +598,7 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0262_magozwe.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

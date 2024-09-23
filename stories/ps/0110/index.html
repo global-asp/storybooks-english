@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">یوه کوچنۍ دانه: د ونګري کیسه( ونګري د نجلۍ نوم دی)!</span>
+		<h1 dir="rtl"><span class="def">یوه کوچنۍ دانه: د ونګري کیسه( ونګري د نجلۍ نوم دی)!</span>
 			<span dir="ltr" class="l1">A Tiny Seed: The Story of Wangari Maathai</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -105,12 +105,50 @@
 
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ps/ps-0110_wangari.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0110_wangari-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ps/ps-0110_wangari-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ps-en/0110_wangari-bilingual_ps-en.pdf" target="_blank">Bilingual PDF (Pashto-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ps-en/0110_wangari-imageless-bilingual_ps-en.pdf" target="_blank">Bilingual imageless PDF (Pashto-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ps/ps-0110_wangari-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ps-en/0110_wangari-bilingual_ps-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Pashto-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0110_wangari-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ps/ps-0110_wangari-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ps-en/0110_wangari-imageless-bilingual_ps-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Pashto-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	په ختیځه افریقا کې د کینیا د کلي ترڅنګ د غره په لمن کې یوه نجلۍ چې ونګري نومېده له خپلې مور سره په پټي کې کار کوه.
 	</h3></div>
 
@@ -134,7 +172,7 @@
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	د ونګري کليوالي ژوند خوښېده. د خپل میوو په بڼ کې ېې ځمکې ييوې کولې او په منځ کې ېې ورته کوچنۍ دانې کېښودې.
 	</h3></div>
 
@@ -158,7 +196,7 @@
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	د هغې د لمر پرېواته ننداره ډيره خوښېده، کله چې د لمروړانګې پنا شوې، د پټي پر نرۍ پوله د کور خواته روانه شوه او ترڅنګ ېې د سیند له خوږ غږ نه خوند اخیسته.
 	</h3></div>
 
@@ -184,7 +222,7 @@ She would follow the narrow paths through the fields, crossing rivers as she wen
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ونګري له ښوونځي سره علاقه درلوده، خو مور او پلار ېې مخالفت کوه چې ښوونځي ته لاړه شي. دوى غوښتل چې ونګري دې يوازې د کور کارونه وکړي. د ونګري عمر د اوو کلونو و، خو ورور ېې ورسره مرسته وکړه. پلار او مور ېې دې ته راضي کړه چې ونګري په ښوونځي کې شامله کړي.
 	</h3></div>
 
@@ -210,7 +248,7 @@ When she was seven years old, her big brother persuaded her parents to let her g
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	د هغې ډيره مینه له کتاب سره وه، چې ډير څه ترې زده کړي او ډيره خوشاله وه چې د زده کړو لپاره د امریکا متحده ایالاتو ته بلل شوې ده. ونګري ډيره لیواله وه چې د نورې نړۍ په اړه هم معلومات ترلاسه کړي.
 	</h3></div>
 
@@ -236,7 +274,7 @@ Wangari was excited! She wanted to know more about the world.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ونګري په امریکا کې ډير څه زده کړه، او د نباتاتو د کښت ټولې لارې چارې ېې زده کړې، دا ېې هم په زړه شول چې د ماشومتوب وخت کې ېې د کینیا په ځنګل کې څه ډول نباتات کښت کړي وو.
 	</h3></div>
 
@@ -260,7 +298,7 @@ Wangari was excited! She wanted to know more about the world.
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	هغې نورې زده کړې هم وکړې، او له خپلو خلکو سره ېې ډيره مینه درلوده، او د دوی د آزاد ژوند لپاره ېې کوښښ کاوه، چې د افریقا خلک ازاد ژوند ولري او پرمختګ وکړي. ونګري به تل خپل افریقايي کور یادوه، ځکه چې ډيرې خاطرې ېې ورپورې تړلې وې.
 	</h3></div>
 
@@ -286,7 +324,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	کله چې ونګري خپلې زده کړې پای ته ورسولې، بېرته کینیا ته راغله، خو د خلکو ژوند کې ډير بدلون راغلی و، د ځمکې پر سر غټ فارمونه خراب شوي و، میرمنو د خوړو لپاره څه نه لرل، د سون توکي ېې خلاص شوي وو او ماشومان هم وږي وو.
 	</h3></div>
 
@@ -310,7 +348,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ونګري پوهېده چې خلک څنګه له فقر او بې وزلۍ وژغوري، خلکو ته ېې له دانو د ثمر لرونکو ونو د کښت او کینولو لارې چارې هم وروښودلې، د کلي خلکو بې ثمره ونې ووهلې او په پیسو ېې کور ته د اړتیا وړ توکي واخېستل، له دې او میرمنو سره ېې دا مرسته وکړه چې څنګه پر ځان بسیا شي.
 	</h3></div>
 
@@ -334,7 +372,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	د وخت په تیریدو سره ونې رالویې شوې او میوې یې ونیولې، له دې سره ځنګلونه زرغون شول، سیندونه وبهیدل او د ونګري نوم په ټوله افریقا کې مشهور شو. د افریقا اوسني ستر ځنګلونه د ونګري د هڅو پایله ده.
 	</h3></div>
 
@@ -358,7 +396,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ونګري اړ وه چې د حالت د ښه کیدو لپاره ډيرزيار وباسي، کار وکړي او د خپلو هڅو له امله ډيره مشهوره شوه. د زحمتونو په بدل کې يې خلکو ورته ډالۍ ورکړه، او دا ډالۍ د نوبل په نامه یادیږي. دا د افریقا په تاریخ کې لومړنۍ میرمن ده چې دا ډالۍ یې ترلاسه کړې ده.
 	</h3></div>
 
@@ -382,7 +420,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ونګري په ۲۰۱۱کال کې مړه شوه، خو کله چې موږ دا ښکلې ونې او ځنګلونه ګورو، د هغې فردي هڅې او کوښښ مو ذهن ته راشي.
 	</h3></div>
 
@@ -430,7 +468,7 @@ The more she learnt, the more she remembered her African home.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ps" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ps" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ps/ps-0110_wangari.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

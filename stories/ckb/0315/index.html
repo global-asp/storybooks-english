@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">گۆرانیه‌کانی ساكیما</span>
+		<h1 dir="rtl"><span class="def">گۆرانیه‌کانی ساكیما</span>
 			<span dir="ltr" class="l1">Sakima's song</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -105,12 +105,50 @@
 
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0315_sakima.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0315_sakima-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ckb/ckb-0315_sakima-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ckb-en/0315_sakima-bilingual_ckb-en.pdf" target="_blank">Bilingual PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ckb-en/0315_sakima-imageless-bilingual_ckb-en.pdf" target="_blank">Bilingual imageless PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ckb/ckb-0315_sakima-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ckb-en/0315_sakima-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0315_sakima-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ckb/ckb-0315_sakima-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ckb-en/0315_sakima-imageless-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ساكیما لەگەڵ دایك و باوك و خوشكە چوار ساڵەكەی دەژیا. ئەوان لەسەر مڵکی پیاوێكی دۆڵەمەند دەژیان. خانوە بچكۆڵه‌که‌‌ی ئه‌وان بە حەسیر داپۆشراوبوو و لە كۆتایی ڕیزە دارەكاندا بوو.
 	</h3></div>
 
@@ -138,7 +176,7 @@ Their grass-thatched hut was at the end of a row of trees.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كاتێك ساكیما تەمەنی سێ ساڵان بوو، نەخۆش كەوت و سۆمای چاوەكانی لە دەست دا. ساكیما كەسێكی بەهرەمەند بوو.
 	</h3></div>
 
@@ -164,7 +202,7 @@ Sakima was a talented boy.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ساكیما زۆر شتی دەتوانی بکات كە كوڕە‌کانی ته‌مه‌ن شەش ساڵە نەیاندەتوانی بیكەن. بۆ نموونە ئەو دەیتوانی لەگەڵ ئەندامانی بەتەمەنی گوندەكەیان دابنیشێت و باسی بابەتی گرنگ بكات.
 	</h3></div>
 
@@ -190,7 +228,7 @@ For example, he could sit with older members of the village and discuss importan
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	دایك و باوكی ساكیما لە ماڵی پیاوێکی دۆ‌ڵەمەند كاریان دەكرد. ئەوان بەیانیان زوو دەڕۆیشتن و ئێواران درەنگ دەهاتنەوە. ساكیما لەگەڵ خوشكە بچوکه‌که‌ی بە تەنیا دەمانەوە.
 	</h3></div>
 
@@ -218,7 +256,7 @@ Sakima was left with his little sister.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ساكیما حەزی لە گۆرانی گوتن بوو. رۆژێك دایكی لێی پرسی: “ساكیما، ئەو گۆرانیانە لە كوێ فێر بووی؟”
 	</h3></div>
 
@@ -244,7 +282,7 @@ One day his mother asked him, “Where do you learn these songs from, Sakima?”
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ساكیما وەڵامی دایەوە: “هەر لەپڕ بۆم دێن، دایە. من لە مێشكی خۆم گوێم لێ دەبن و دواتر دەیانڵێمەوە.”
 	</h3></div>
 
@@ -268,7 +306,7 @@ One day his mother asked him, “Where do you learn these songs from, Sakima?”
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ساكیما پێی خۆش بوو گۆرانی بۆ خوشكە بچووكەكەی بڵێت بەتایبەت كاتێك كە برسی دەبوو. خوشكەكەی گوێی بۆ ئه‌و گۆرانییه‌ی ڕاده‌دگرت که حەزی لێ بوو، ئەویش گۆرانیه‌که‌ی بۆ ده‌گوت. ئەو بە دەنگە هێمنكەرەوەكە خۆی رادەژاند.
 	</h3></div>
 
@@ -296,7 +334,7 @@ She would sway to the soothing tune.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	خوشكەكەی داوای لێكرد: “ساكیما دەتوانی ئەو گۆرانیەم دوبارە و دوبارە بۆ بڵێیەوە؟” ساكیماش به قسه‌ی ده‌كرد و گۆرانیەكەی دوبارە و دوباره بۆ ده‌گوتەوە.
 	</h3></div>
 
@@ -322,7 +360,7 @@ Sakima would accept and sing it over and over again.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	شەوێكیان كاتێ دایك و باوكی بۆ ماڵەوە گەڕانەوە، ئەوان زۆر بێدەنگ بوون. ساكیما دەیزانی كە شتێك روویداوە.
 	</h3></div>
 
@@ -348,7 +386,7 @@ Sakima knew that there was something wrong.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ساكیما پرسی: “دایە، بابە، چی رویداوە؟” ساكیما تێگەیشت كە كوڕی پیاوە دۆڵەمەندەكە ون بووه. پیاوەكە زۆر نیگەران و تەنیایە.
 	</h3></div>
 
@@ -376,7 +414,7 @@ The man was very sad and lonely.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ساكیما بە دایك و باوكی گوت: “من دەتوانم گۆرانی بۆ بڵێم. لە وانەیە ئەو دووبارە خۆشحاڵ ببێتەوە.” بەڵام دایك و باوكی داواكەیان رەت كردەووە. ئەوان گوتیان: “ئەو زۆر دۆڵەمەندە. تۆ تەنیا كوڕێكی نابینای. تۆ پێت وایە گۆرانیەكەی تۆ دەتوانێ یارمەتی ئەو بدات؟”
 	</h3></div>
 
@@ -404,7 +442,7 @@ But his parents dismissed him.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	لەگەڵ ئەوەشدا ساكیما هەر كۆڵی نەدا. خوشكە بچووكەكەشی پشتگیری كرد و گوتی: “گۆرانیەكانی ساكیما ئارامم دەكەنەوە كاتێك برسی دەبم. هەروەها پیاوە دۆڵەمەندەکەش ئارام دەکەنەوە.”
 	</h3></div>
 
@@ -432,7 +470,7 @@ She said, “Sakima’s songs soothe me when I am hungry. They will soothe the r
 
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/14.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	رۆژی داهاتو ساكیما داوای لە خوشكە بچكۆلەكەی كرد ببێته چاوساغی بۆ چوونه ماڵی پیاوە دەوڵەمەندەكە.
 	</h3></div>
 
@@ -456,7 +494,7 @@ She said, “Sakima’s songs soothe me when I am hungry. They will soothe the r
 
 <div id="text15" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/15.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ئەو لە ژێر پەنجەرەیەكی گەورە راوەستا و دەستی بە گوتنی ئەو گۆرانیەی كرد كە بۆ خۆی زۆری حەز لێ بوو. ورده، ورده سەری پیاوە دۆڵەمەندەكە لە ناو پەنجەرە گه‌وره‌که وەدەركەوت.
 	</h3></div>
 
@@ -482,7 +520,7 @@ Slowly, the head of the rich man began to show through the big window.
 
 <div id="text16" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/16.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كرێكارەكان دەستیان لە كارەكانیان هەڵگرت. ئەوان گوێیان بۆ سترانە خۆشه‌‌که‌ی ساكیما راگرت. بەڵام پیاوێك گوتی: “هیچ كەس نەیتوانیوە دڵنەوایی به‌ڕێوه‌به‌ر بداتەوە. ئێستا ئەم مندالە نابینایە پێی وایە دەتوانێ دڵنەوایی ئەو بداتەوە؟”
 	</h3></div>
 
@@ -508,7 +546,7 @@ But one man said, “Nobody has been able to console the boss. Does this blind b
 
 <div id="text17" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/17.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ساكیما لە گۆرانی گوتن تەواو بوو و رووی وەرسووڕاند بۆ ئەوەی بڕوات. بەڵام پیاوە دۆڵەمەندەكە بەخێرایی هاتە دەرەوە و گوتی: “تكایە دووبارە گورانییەكە بڵێوە.”
 	</h3></div>
 
@@ -534,7 +572,7 @@ But the rich man rushed out and said, “Please sing again.”
 
 <div id="text18" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/18.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	رێك هەر لەو كاتەدا دوو پیاو هاتن كە یه‌کێکیان له سه‌ر ته‌خته‌به‌ره پێ بوو. ئەوان كوڕی پیاوە دۆڵەمەندەكەیان دۆزیبۆوه‌، که لێیدرا بوو و له قه‌راخ رێگا به‌جێیان هێشت بوو.
 	</h3></div>
 
@@ -560,7 +598,7 @@ They had found the rich man’s son beaten up and left on the side of the road.
 
 <div id="text19" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/19.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	پیاوە دەوڵەمەندەكە زۆر خۆشحاڵ بوو كاتێ دووبارە چاوی بە كوڕەكەی كەوتەوە. ئەو پاداشتی ساكیمای كرد لەبەر ئەوەی دڵنەوایی دابۆوه. ئەو كوڕەكەی و ساكیمای بۆ نەخۆشخانە برد. ساكیما دووبارە بینایی بۆ چاوەكانی گەڕایەوە.
 	</h3></div>
 
@@ -612,7 +650,7 @@ He took his son and Sakima to hospital so Sakima could regain his sight.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0315_sakima.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

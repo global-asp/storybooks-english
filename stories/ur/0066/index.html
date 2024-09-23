@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">نوزیبیلے اور تین بال</span>
+		<h1 dir="rtl"><span class="def">نوزیبیلے اور تین بال</span>
 			<span dir="ltr" class="l1">Nozibele and the three hairs</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -108,12 +108,50 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ur/ur-0066_nozibele.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0066_nozibele-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ur/ur-0066_nozibele-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ur-en/0066_nozibele-bilingual_ur-en.pdf" target="_blank">Bilingual PDF (Urdu-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ur-en/0066_nozibele-imageless-bilingual_ur-en.pdf" target="_blank">Bilingual imageless PDF (Urdu-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ur/ur-0066_nozibele-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ur-en/0066_nozibele-bilingual_ur-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Urdu-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0066_nozibele-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ur/ur-0066_nozibele-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ur-en/0066_nozibele-imageless-bilingual_ur-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Urdu-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	کافی عرصہ پہلے تین لڑکیاں لکڑیاں اکھٹی کرنے باہر نکلیں۔
 	</h3></div>
 
@@ -139,7 +177,7 @@ out to collect wood.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وہ ایک گرم دن تھا اس لیے وہ نیچے دریا میں تیرنے چلی گئیں۔ وہ پانی میں کھلیں اور مل کر پانی اچھالا۔
 	</h3></div>
 
@@ -167,7 +205,7 @@ swam in the water.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	اچانک اُنہیں احساس ہوا کہ کافی دیر ہو چکی ہے۔ وہ واپس گاوں کی طرف بھاگیں۔
 	</h3></div>
 
@@ -194,7 +232,7 @@ They hurried back to the village.
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	گھر کے قریب پہنچ کر نوزیبیلے نے اپنا ہاتھ گردن پر رکھا۔ وہ اپنا ہار کہیں بھول آئی۔ میرے ساتھ واپس چلو اُس نے اپنی دوستوں سے منت کی، لیکن اُس کی دوستوں نے دیر ہونے کی وجہ سے انکار کر دیا۔
 	</h3></div>
 
@@ -224,7 +262,7 @@ But her friends said it was too late.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	اس لیے نوزیبیلے اکیلی در یا پر چلی گئی۔ اُسے اپنا ہار ملا اور وہ گھر کی طرف بھاگی۔ لیکن وہ اندھیرے میں کھو گئی۔
 	</h3></div>
 
@@ -253,7 +291,7 @@ But she got lost in the dark.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	دور فاصلے پر اُسے ایک جھونپڑی سے روشنی آتی دیکھائی دی۔ وہ بھاگتی ہوئی اُس کے پاس پہنچی اور دروازے پر دستک دی۔
 	</h3></div>
 
@@ -281,7 +319,7 @@ at the door.
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وہ حیرت زدہ تھی، کہ ایک کتے نے دروازہ کھولا اور پوچھا ‘تمہیں کیا چاہیے؟’ نوزیبیلے نے کہا کہ میں کھو گئی ہوں، مجھے سونے کے لیے جگہ چاہیے۔ کتے نے کہا اندر آجاوٴ ورنہ تو میں تمہیں کاٹوں گا۔ اس لیے نوزیبیلے اندر آگئی۔
 	</h3></div>
 
@@ -312,7 +350,7 @@ So Nozibele went in.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	پھر کتے نے کہا میرے لیے کھانا پکاو! لیکن میں نے کبھی کتے کے لیے کھانا نہیں بنایا اُس نے جواب دیا۔ پکاو، ورنہ میں تمہیں کاٹ لوں گا کتے نے کہا۔ اس لیے نوزیبیلے نے کتے کے لیے کچھ کھانا پکایا۔
 	</h3></div>
 
@@ -342,7 +380,7 @@ the dog.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	پھر کتے نے کہا، میرے لیے بستر لگاو! نوزیبیلے نے جواب دیا میں نے کبھی کتے کے لیے بستر نہیں لگایا۔ کتے نے کہا بستر لگاو، ورنہ میں تمہیں کاٹ جاوٴں گا۔ اس لیے نوزیبیلے نے بستر لگایا۔
 	</h3></div>
 
@@ -373,7 +411,7 @@ So Nozibele made the bed.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ہر دن اُسے کھانا پکانا پڑتا اورکتے کے لیے صفائی ستھرائی کا خیال رکھنا پڑتا۔ پھر ایک دن کتے نے کہا نوزیبیلے آج مجھے کچھ دوستوں سے ملنے جانا ہے۔ گھر صاف کر دو۔ جب تک میں واپس آوں کھانا بناوٴ اور میری چیزیں دھو دو۔
 	</h3></div>
 
@@ -404,7 +442,7 @@ before I come back.”
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	کتے کے جانے کے فوراً بعد نوزیبیلے نے اپنے سر سے تین بال نکالے۔ ایک بال اُس نے بستر کے نیچے رکھا، ایک بال دروازے کے پیچھے اور ایک بال باڑے میں رکھا۔ پھر وہ گھر کی طرف بھاگی جتنا تیز وہ بھاگ سکتی تھی۔
 	</h3></div>
 
@@ -436,7 +474,7 @@ could.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	جب کتا واپس آیا، اُس نے نوزیبیلے کو تلاش کیا۔ نوزیبیلے، تم کہاں ہو؟ وہ چلایا۔ میں یہاں ہوں بستر کے نیچے، پہلے بال نے آواز دی۔ میں یہاں ہوں دروازے کے پیچھے دوسرے بال نے آواز دی۔ میں یہاں باڑے میں ہوں، تیسرے بال نے آواز دی۔
 	</h3></div>
 
@@ -470,7 +508,7 @@ third hair.
 
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/14.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	پھر کتے کو پتہ چل گیا کہ نوزیبیلے اُس کے ساتھ کھیل کھیل رہی ہے۔ اس لیے وہ گاوں کی طرف بھاگا۔ لیکن نوزیبیلے کے بھائی وہاں ہاتھوں میں بڑے بڑے ڈنڈے لیے اسکا انتظار کر رہے تھے۔ کتا واپس مڑا اور بھاگ گیا اور آج تک کبھی دکھائی نہیں دیا۔
 	</h3></div>
 
@@ -527,7 +565,7 @@ has never been seen since.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ur" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ur" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ur/ur-0066_nozibele.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

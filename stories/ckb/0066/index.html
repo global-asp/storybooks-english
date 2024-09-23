@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">نوزیبێله و سێ تاڵە موو</span>
+		<h1 dir="rtl"><span class="def">نوزیبێله و سێ تاڵە موو</span>
 			<span dir="ltr" class="l1">Nozibele and the three hairs</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -105,12 +105,50 @@
 
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0066_nozibele.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0066_nozibele-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ckb/ckb-0066_nozibele-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ckb-en/0066_nozibele-bilingual_ckb-en.pdf" target="_blank">Bilingual PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ckb-en/0066_nozibele-imageless-bilingual_ckb-en.pdf" target="_blank">Bilingual imageless PDF (Kurdish (Sorani)-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ckb/ckb-0066_nozibele-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ckb-en/0066_nozibele-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0066_nozibele-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ckb/ckb-0066_nozibele-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ckb-en/0066_nozibele-imageless-bilingual_ckb-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Kurdish (Sorani)-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	لە سەردەمانی زوو، سێ كچ چووبوونە دەرەوە بۆ داركۆكردنەوە.
 	</h3></div>
 
@@ -135,7 +173,7 @@ out to collect wood.
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ڕۆژێكی زۆر گەرم بوو، بۆیە چوونە دەم ڕووبارەكە بۆ مەلەكردن. ئەوان یارییان كرد و شەڕەئاو و مەلەیان كرد.
 	</h3></div>
 
@@ -162,7 +200,7 @@ swam in the water.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	لەناكاو بە پێیان زانی كە كات درەنگ بووه، بۆیە خێرا گەڕانەوە بۆ گوندەكەیان.
 	</h3></div>
 
@@ -188,7 +226,7 @@ They hurried back to the village.
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كاتێك لە ماڵ نزیك بوونەوە، نوزیبێله دەستی بۆ ملی برد. ئەو ملوانەكەكەی لەبیر چووبوو، بۆیە لە دەستەخوشكەكانی پاڕایەوە: “تكایە لە گەڵم بگەڕێنەوە بۆ ئەوەی ملوانكەكە بهێنمەوە.” بەڵام هاوڕێكانی گوتیان تازە زۆر درەنگە.
 	</h3></div>
 
@@ -217,7 +255,7 @@ But her friends said it was too late.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	بۆیە نوزیبێله بە تەنیا بۆ دەم ڕووبارەكە گەڕایەوە. ملوانكەكەی دۆزییەوە و بە پەلە بەرەو ماڵ كەوتە ڕێ، بەڵام لە بەر تاریکی رێگای لێ ون بوو.
 	</h3></div>
 
@@ -245,7 +283,7 @@ But she got lost in the dark.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	لە دوورەوە ڕووناكاییەكی لە كۆخێكەوە بینی. ئەو بەرەو كۆخەكە ڕایكردو لە دەرگای دا.
 	</h3></div>
 
@@ -272,7 +310,7 @@ at the door.
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	سەری سوڕما كاتێك بینی سەگێك دەرگاكەی كردەوە، سەگەكە گوتی: “چیت دەوێ؟” نوزیبێله وه‌ڵامی دایەوە: “من بزر بوومە و پێویستم بە شوێنی خەوە.” سەگەكە گوتی: “وەرە ژوورەوە دەنا دەتگەزم!” بۆیە نوزیبێله چووە ژوورەوە.
 	</h3></div>
 
@@ -302,7 +340,7 @@ So Nozibele went in.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	دواتر سەگەكە گوتی: “خواردنم بۆ دروست بكە!” نوزیبێله گوتی: “من پێشتر هەرگیز خواردنم بۆ سەگ دروست نەكردووە.” سەگەكە گوتی: “خواردنم بۆ دروست بكە دەنا دەتگەزم!” بۆیە نوزیبێله هەندێ خواردنی بۆ سەگەكە ئامادە كرد.
 	</h3></div>
 
@@ -331,7 +369,7 @@ the dog.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	دواتر سەگەكە گوتی: “جێگام بۆ ڕاخە!” نوزیبێله گوتی: “من هەرگیز جێگای خەوم بۆ سەگ ڕانەخستووە.” سەگەکە گوتی: “جێگای خەوەكەم بۆ ڕاخە دەنا دەتگەزم!” بۆیە نوزیبێله جێگاكەی بۆ ڕاخست.
 	</h3></div>
 
@@ -361,7 +399,7 @@ So Nozibele made the bed.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	نوزیبێله هەموو رۆژێ ناچار بوو كە خواردن بۆ سەگەكە دروست بکا و ناوماڵەكەی گەسک بدات و خاوێن بكاتەوە. ڕۆژێكیان سەگەكە گوتی: “نوزیبێله، من ئەمڕۆ دەبێ بچم سەردانی چەند هاوڕێیەكم بكەم. ماڵەكە گەسك بدە، خاوێنی بکه‌وه وخواردن دروست بكە پێش ئەوەی بگەڕێمەوە.”
 	</h3></div>
 
@@ -391,7 +429,7 @@ before I come back.”
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	هەر دوای ئەوەی كە سەگەكە ڕۆیشت، نوزیبێله سێ تاڵە مووی لە سەری خۆی كردەوە. ئەو تاڵێكی لەژێر تەختە خەوەكە دانا و تاڵێكی دیكەش لە پشت دەرگاكە و تاڵەكەی دیكەشی لە حەوشەكە دانا. دواتر زۆر بە خێرایی گەڕایەوە ماڵەوە.
 	</h3></div>
 
@@ -422,7 +460,7 @@ could.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كاتێ سەگەكە گەڕایەوە، بە دوای نوزیبێله دا گەڕا. بانگی كرد: “نوزیبێله، تۆ لە كوێی؟” تاڵە مووی یەكەم گوتی: “ئەوەتام لەژێر تەختەخەوەكە.” تاڵه‌ مووی دووەم گوتی: “ئەوەتام لە پشت دەرگاكە.” و تاڵه‌ مووی سێهەم گوتی: “ئەوەتام لە حەوشەكە.”
 	</h3></div>
 
@@ -455,7 +493,7 @@ third hair.
 
 <div id="text14" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0066/14.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	ئەوكات سەگەكە تێگەیشت كە نوزیبلە فێڵی لێ كردووە. تەواوی ئەو رێگایەی بۆ گوندەكە دەچوو بە غاردان بڕی. بەڵام براكانی نوزیبێله بە گۆپاڵی گەورە چاوەڕێیان دەكرد. سەگەكە گەڕایەوە و هەڵات و ئیتر دووبارە که‌س نه‌یدیتۆتەوه.
 	</h3></div>
 
@@ -510,7 +548,7 @@ has never been seen since.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ckb" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ckb/ckb-0066_nozibele.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 

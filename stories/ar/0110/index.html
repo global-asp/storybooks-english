@@ -47,7 +47,7 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
@@ -88,7 +88,7 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1 dir="rtl" dir="rtl" dir="rtl"><span class="def">البذرة الصغيرة – حكاية ونقاري ماتهاي</span>
+		<h1 dir="rtl"><span class="def">البذرة الصغيرة – حكاية ونقاري ماتهاي</span>
 			<span dir="ltr" class="l1">A Tiny Seed: The Story of Wangari Maathai</span>
 		</h1>
 		<div class="btn-group cover-buttons">
@@ -108,12 +108,50 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ar/ar-0110_wangari.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0110_wangari-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ar/ar-0110_wangari-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ar-en/0110_wangari-bilingual_ar-en.pdf" target="_blank">Bilingual PDF (Arabic-English, landscape)<br><center><img src="/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ar-en/0110_wangari-imageless-bilingual_ar-en.pdf" target="_blank">Bilingual imageless PDF (Arabic-English, landscape)<br><center><img src="/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ar/ar-0110_wangari-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ar-en/0110_wangari-bilingual_ar-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Arabic-English)<br><center><img src="/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0110_wangari-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ar/ar-0110_wangari-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ar-en/0110_wangari-imageless-bilingual_ar-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Arabic-English)<br><center><img src="/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
+</div>
 
 <hr>
 
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	في قرية على منحدر جبل كينيا بشرق إفريقيا، كان هناك فتاة صغيرة تدعى ونقاري تعمل مع أمها في الحقول.
 	</h3></div>
 
@@ -138,7 +176,7 @@
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كانت ونقاري تحب الحياة خارج البيت فكنت أراها تعمل في حديقة منزل العائلة، تشق التربة بعصاها وتغرس الحبات الصغيرة في أديم الأرض الدافئ.
 	</h3></div>
 
@@ -163,7 +201,7 @@
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وكانت أفضل فترات اليوم لديها هي فترة ما بعد الغروب، حين يسدل الليل ستاره ويحل الظلام. عندها تعرف ونقاري أن الوقت قد حان للعودة إلى المنزل فتحث خطاها إلى البيت متبعة المسالك الضيقة عبر الحقول، عابرة الأنهار التي تعترض طريقها.
 	</h3></div>
 
@@ -190,7 +228,7 @@ She would follow the narrow paths through the fields, crossing rivers as she wen
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	كانت ونقاري فتاة ذكية وكانت شغوفة بالذهاب إلى المدرسة لكن أمها وأباها أراداها أن تبقى في المنزل لإعانتهما. لكن عندما بلغت سن السابعة من عمرها استطاع أخوها الأكبر إقناع والديها بأن يسمحا لها بالالتحاق بالمدرسة.
 	</h3></div>
 
@@ -217,7 +255,7 @@ When she was seven years old, her big brother persuaded her parents to let her g
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	شغفت ونقاري بالدراسة وكانت كلما قرأت كتاباً زاد شغفها بالتعلم. وحققت ونقاري نتائج باهرة في المدرسة مما مكنها من مواصلة دراستها بالولايات المتحدة الأمريكية. فرحت الفتاة كثيرا وزادت رغبتها في التعرف على العالم.
 	</h3></div>
 
@@ -244,7 +282,7 @@ Wangari was excited! She wanted to know more about the world.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	تعلمت ونقاري العديد من الأشياء الجديدة في الجامعة الأمريكية وتلقت دروسا حول النباتات وكيفية نموها. استرجعت ونقاري ذكريات طفولتها عندما كانت تلعب مع إخوتها تحت ظل الأشجار في غابات كينيا الجميلة.
 	</h3></div>
 
@@ -269,7 +307,7 @@ Wangari was excited! She wanted to know more about the world.
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وبقدر ما كانت تزداد علماً ودراسة بقدر ما كان حبها لشعب كينيا يزداد ويتعمق. كانت تريدهم أن يكونوا سعداء وأحراراً، فكانت كلما زاد علمها، زاد تعلقها بموطنها.
 	</h3></div>
 
@@ -296,7 +334,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وعندما أنهت ونقاري دراستها رجعت إلى كينيا، لكنها اكتشفت أن كينيا قد تغيرت: كانت المزارع الشاسعة تمتد في جميع أنحاء الأرض بينما لم يكن للنساء حطباً لطهي الطعام وكان الناس فقراء والصغار جياعاً.
 	</h3></div>
 
@@ -321,7 +359,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	عرفت ونقاري ما يجب عليها فعله. فعلمت النساء كيف يزرعن البذور، ونمت الأشجار وأصبحت النساء يبعن هذه الأشجار وبثمنها يعتنين بعائلاتهن. شعرت النساء بالسعادة، فقد ساعدتهن ونقاري على أن يكنَّ قويات فاعلات.
 	</h3></div>
 
@@ -346,7 +384,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	وبمرور الزمن، تحولت الأشجار إلى غابات وجرت الأنهار بالماء من جديد وانتشرت رسالة ونقاري في كامل أرجاء إفريقيا، ونمت ملايين الأشجار بفضل بذور ونقاري.
 	</h3></div>
 
@@ -371,7 +409,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	لاحظ الناس في جميع أنحاء العالم تفاني ونقاري في العمل وقدموا لها جائزة شهيرة: إنها جائزة نوبل للسلام والتي كانت ونقاري أول امرأة افريقية تحصل عليها.
 	</h3></div>
 
@@ -396,7 +434,7 @@ The more she learnt, the more she remembered her African home.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0110/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl" dir="rtl" dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3 dir="rtl">
 	توفيت ونقاري سنة 2011، لكننا نتذكرها في كل شجرة جميلة نراها حولنا.
 	</h3></div>
 
@@ -446,7 +484,7 @@ The more she learnt, the more she remembered her African home.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/stories/ar" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/stories/ar" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ar/ar-0110_wangari.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 
