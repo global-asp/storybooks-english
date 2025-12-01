@@ -12,7 +12,7 @@
 	<link rel="shortcut icon" href="/favicon.ico?v=4">
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
-	<title>Anansi noGhudimuki - Multilingual English Storybooks</title>
+	<title>Anansi noUtari - Multilingual English Storybooks</title>
 	<meta name="description" content="Storybooks for Learners of English is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available with text and audio in English as well as a wide variety of languages spoken around the world.
 ">
 	<link rel="stylesheet" href="/css/spectre.min.css">
@@ -88,21 +88,23 @@
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h1><span class="def">Anansi noGhudimuki</span>
+		<h1><span class="def">Anansi noUtari</span>
 			<span class="l1">Anansi and Wisdom</span>
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/mhw/0006/mp3/01.mp3"></audio>
 			<button onclick="switchlang('mhw,en','en,mhw')" class="btn btn-lg lang-primary" title="Switch between Thimbukushu and English">en</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon cover-icon-text" src="/css/pencil.svg" alt="Written by"></span> Ghanaian folktale</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon cover-icon-text" src="/css/art.svg" alt="Illustrated by"></span> Wiehan de Jager</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon cover-icon-text" src="/css/global.svg" alt="Translated by"></span> Ruthgela Shawanga</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon cover-icon-text" src="/css/global.svg" alt="Translated by"></span> Ruthgela Shawanga, Servasius M. Ndjunga</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/css/language.svg" alt="Language"></span> <a href="/stories/mhw">Thimbukushu</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/css/level.svg" alt="Level"></span> <a href="/stories/mhw/level3">Level 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-text" src="/css/speaker.svg" alt="Narrate full story"></span> <span class="cover_msg">The audio for this story is currently not available.</span></h3>
-
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/mhw/0006/mhw-0006_anansi.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Reading speed"><img class="cover-icon cover-icon-text" src="/css/speedometer.svg" alt="Reading speed" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Reading speed: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <div class="modal" id="modal-pdf">
@@ -149,7 +151,7 @@
         <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Pakarekare hanu mbadi hadimukire kehe yino. Mbadi hadimukire kukuna mbuto, ngambi kufuma yitere, ngambi kufura yirughanitha yo yikuvo. Nyambi Nyame ghokuwiru gha karire no ghudimuki ghoghuhe mukaye. Gha turire ghudimuki ghu mukandimbe koghuma.
+	Pakarekare hanu mbadi hadimukire keheyino. Mbadi hadimukire kukuna mbuto, ngambi kufuma yitere, ngambi kufura maghondo. Nyambi Nyame ghokuwiru ghakarire noutari ghoghuhe ghomukaye. Aye ghaghupungurire mukandimbe koghuma.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -167,7 +169,8 @@ He kept it safe in a clay pot.
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/mhw/0006/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('mhw,en','en,mhw')" class="btn btn-lg lang-primary" title="Switch between Thimbukushu and English">en</button>
@@ -180,7 +183,7 @@ He kept it safe in a clay pot.
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Diyuwa dimweya, Nyame gha tokore eshi gha kona kutapa kandimbe ko ghudimuki kwaAnansi. Kehe ruvedhe nga kenganga Anansi mukandimbe ka, aye nga dimukanga thinu thothipya. Nga yi mushambererithanga thikuma!
+	Diyuwa dimweya, Nyame ghatokorire eshi ghakona kutapa kandimbe koutari kwaAnansi. Kehe ruvedhe ngakenganga Anansi mukandimbe ‘ka, aye ngadimukanga thinu thothipya. Ngayimushambererithanga thikuma!
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -196,7 +199,8 @@ new. It was so exciting!
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/mhw/0006/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('mhw,en','en,mhw')" class="btn btn-lg lang-primary" title="Switch between Thimbukushu and English">en</button>
@@ -209,7 +213,7 @@ new. It was so exciting!
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Anansi gho ghumu gha ghayarire, “Ṅanyi niture kandimbe ka kuwiru dho thitondo tho thire. Podiyo eshi ka kukare kange pithange!” Gha dhingumutwedhire wanda gho ghure ku kandimbe, no gha kuwangerere kandimbe mudipumba dyendi. Gha dhinine thitondo. Ene ya mukarere ghukukutu kudhina thitondo no kandimbe ghu mugunda pa manwi ruvedhe roruhe.
+	Anansi ghokahoma ghaghayarire, “Ñanyi niture kandimbe ‘ka kuwiru dhothitondo thothire. Podigho eshi kakukare kange pithange!” Ghadhingumwetwedhire wanda ghoghure kukandimbe, noghakughangire kandimbe mudipumba dyendi. Ghatangire kudhina kuthitondo. Ene yamukarere ukukutu kudhina thitondo nokandimbe ‘ka kamugundagundire pamanwi nako dhodhihe.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -230,7 +234,8 @@ knees all the time.
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/mhw/0006/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('mhw,en','en,mhw')" class="btn btn-lg lang-primary" title="Switch between Thimbukushu and English">en</button>
@@ -243,7 +248,7 @@ knees all the time.
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Ruvedhe roruhe mwana Anonsi gho mungaghu ghemanine pamuve dho thitondo ghurorera. Gha ghambire, “Ngo mbadi ghuredhu ngo ghuna kuwangera kandimbe kumughongo ghoye?” Anansi gha yerekire ku kuwangera kandimbe ka kokuyara ghudimuki ku mughongo wendi, shemwa ya mukarere ghuredhu.
+	Ruvedhe roruhe ‘ru mwana Anansi ghomurumyana ghemanine mwimi dhothitondo ghurorera. Ghaghambire eshi, “Ngombadi shoyikare ghuredhu ngeshi ghukughangerere kandimbe kumughongo ghoye ndi?” Anansi ghayerekire kukughangerera kandimbe ‘ka kokuyara utari kumughongo wendi, noshemwa yamukarere ghuredhu.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -262,7 +267,8 @@ really was a lot easier.
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/mhw/0006/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('mhw,en','en,mhw')" class="btn btn-lg lang-primary" title="Switch between Thimbukushu and English">en</button>
@@ -275,7 +281,7 @@ really was a lot easier.
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Muruvedhe ro rufupi gha ka kumine kundaghandagha dho thitondo. Ene ghemane no gha ghayarire, “Yame naroghera kukara no ghudimuki ghoghuhe, ene mwanange pano ne ghana ghayara thikuma kunipitakana!” Anansi gha patire thikuma no gha vukumine kandimbe ka koghuma pamuve.
+	Muthikandho, ghakakumine kundaghandagha dhothitondo. Ene ghemaniine noghaghayarire, “Yame naroghera kukara noutari ghoghuheya, ene mwanange pano ne ghanaghayara thikuma kunipitakana!” Yinu ‘yi yapatithire thikuma Anansi noghavukumine kandimbe koghuma pamuve.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -295,7 +301,8 @@ out of the tree.
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/mhw/0006/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('mhw,en','en,mhw')" class="btn btn-lg lang-primary" title="Switch between Thimbukushu and English">en</button>
@@ -308,7 +315,7 @@ out of the tree.
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-	Kandimbe ka koghuma kapayukire. Ghudimuki wa karire gho nyaranyara kwa kehe yu. No kengeyo dyo ha kuhongire hanu kudima, kufuma yitere, no kufura yirughanitha yo yikuvo no yinu yimweya eyi hadimuka kutenda hanu.
+	Kandimbe koghuma kapayukire. Utari wakarire keho ghonyaranyara kwakeheyu. Kemo dyohakuhongire hanu kudima, kufuma yitere, nokufura yirughanitha yomaghondo noyinu yimweya eyi hatwetha kutenda hanu.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l1"><h3>
@@ -327,7 +334,8 @@ how to do.
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/mhw/0006/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('mhw,en','en,mhw')" class="btn btn-lg lang-primary" title="Switch between Thimbukushu and English">en</button>
@@ -342,7 +350,7 @@ how to do.
 	<div class="column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h5><span class="colophon-heading">Written by:</span> Ghanaian folktale</h5>
 		<h5><span class="colophon-heading">Illustrated by:</span> Wiehan de Jager</h5>
-		<h5><span class="colophon-heading">Translated by:</span> Ruthgela Shawanga</h5>
+		<h5><span class="colophon-heading">Translated by:</span> Ruthgela Shawanga, Servasius M. Ndjunga</h5>
 		<h5><span class="colophon-heading">Language:</span> <a href="/stories/mhw">Thimbukushu</a></h5>
 		<h5><span class="colophon-heading">Level:</span> <a href="/stories/mhw/level3">Level 3</a></h5>
 		<h5><span class="colophon-heading">Source:</span> <a href="https://africanstorybook.org/reader.php?id=1938" target="_blank">Anansi and Wisdom</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
@@ -352,13 +360,13 @@ how to do.
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Read more <a href="/stories/mhw/level3">level 3</a> stories:</h5>
-			<label class="chip"><a href="/stories/mhw/0110/">Kananda kokambiru: Thithimwa tha Wangari Maathai</a></label>
-			<label class="chip"><a href="/stories/mhw/0066/">Nozibele nohuki dhihatu</a></label>
-			<label class="chip"><a href="/stories/mhw/0141/">Shushwa no Dighongoro</a></label>
-			<label class="chip"><a href="/stories/mhw/0201/">Dongighana</a></label>
+			<label class="chip"><a href="/stories/mhw/0110/">Kananda koKambiru: Thithimwa thaWangari Maathai</a></label>
+			<label class="chip"><a href="/stories/mhw/0066/">Nozibele notuhuki tuhatu</a></label>
+			<label class="chip"><a href="/stories/mhw/0141/">Shushwa naDighongoro</a></label>
+			<label class="chip"><a href="/stories/mhw/0201/">Dongyana</a></label>
 			<label class="chip"><a href="/stories/mhw/0315/">Dimbo dyaSakima</a></label>
-			<label class="chip"><a href="/stories/mhw/0324/">Diyuwa edi na shwaghire kudighumbo ni yende muñurumbara</a></label>
-			<label class="chip"><a href="/stories/mhw/0158/">Mutende naṄwanyi</a></label>
+			<label class="chip"><a href="/stories/mhw/0324/">Diyuwa edi natambire kuñurumbara</a></label>
+			<label class="chip"><a href="/stories/mhw/0158/">Mutende naKarukodhi</a></label>
 	</div>
 </div>
 <div>
